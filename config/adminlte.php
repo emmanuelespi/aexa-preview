@@ -318,7 +318,265 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ], */
-        ['header' => 'account_settings'],
+        [
+            'text' => 'Ventas',
+            'icon' => 'fas fa-shopping-bag',
+            'submenu' => [
+                [
+                    'text' => 'Taquillas',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => 'taquillas'
+                ],
+                [
+                    'text' => 'Corridas',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => 'corridas'
+                ],
+                [
+                    'text' => 'Depósitos',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => 'depositos'
+                ],
+                [
+                    'text' => 'Cancelaciones',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => 'cancelaciones'
+                ],
+                [
+                    'text' => 'Transferencias',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ],
+                [
+                    'text' => 'Liberar lugares',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ],
+                [
+                    'text' => 'Depósitos FIDE',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ],
+                [
+                    'text' => 'Depósitos FIDE',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ],
+                [
+                    'text' => 'Depósitos FIDE',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ]
+            ]
+                ],
+        [
+            'text' => 'Catálogos',
+            'icon' => 'fas fa-table',
+            'submenu' => [
+                [
+                    'text' => 'Empleados',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => 'empleados'
+                ],
+                [
+                    'text' => 'Clientes',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => 'clientes'
+                ],
+                [
+                    'text' => 'Empresas',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => 'empresas'
+                ],
+                [
+                    'text' => 'Terminales',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => 'terminales'
+                ],
+                [
+                    'text' => 'Precios',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => 'precios'
+                ],
+                [
+                    'text' => 'Corridas',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => 'cat_corridas'
+                ],
+                [
+                    'text' => 'Descuentos',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ],
+                [
+                    'text' => 'Autobuses',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ],
+                [
+                    'text' => 'AEXA NIP',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ],
+                [
+                    'text' => 'Sucursales',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ]
+            ]
+        ],
+        [
+            'text' => 'Monitoreo',
+            'icon' => 'fas fa-tv',
+            'submenu' => [
+                [
+                    'text' => 'Depósitos',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ],
+                [
+                    'text' => 'Terminales',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ],
+                [
+                    'text' => 'Tráfico',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ],
+                [
+                    'text' => 'Fideicomiso',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ],
+                [
+                    'text' => 'Estadísticas',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ]
+            ]
+        ],
+        [
+            'text' => 'IMSS',
+            'icon' => 'fas fa-hospital-alt',
+            'submenu' => [
+                [
+                    'text' => 'Registro',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ],
+                [
+                    'text' => 'Caratula global',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ],
+                [
+                    'text' => 'Corte de taquilla',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ],
+                [
+                    'text' => 'Relación cancelados',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ],
+                [
+                    'text' => 'Estadísticas',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#'
+                ]
+                    ]
+                ],
+                [
+                    'text' => 'Utilerias',
+                    'icon' => 'fas fa-wrench',
+                    'submenu' => [
+                        [
+                            'text' => 'Generar corridas',
+                            'icon' => 'fas fa-layer-group',
+                            'url' => '#'
+                        ],
+                        [
+                            'text' => 'Generar días depósitos',
+                            'icon' => 'fas fa-layer-group',
+                            'url' => '#'
+                        ],
+                        [
+                            'text' => 'Respaldo de seguridad',
+                            'icon' => 'fas fa-layer-group',
+                            'url' => '#'
+                        ],
+                        [
+                            'text' => 'Optimizar',
+                            'icon' => 'fas fa-layer-group',
+                            'url' => '#'
+                        ],
+                        [
+                            'text' => 'Optimizar FIDE',
+                            'icon' => 'fas fa-layer-group',
+                            'url' => '#'
+                        ]
+                    ]
+                ],
+                [
+                    'text' => 'Reportes',
+                    'icon' => 'fas fa-file-alt',
+                    'submenu' => [
+                            [
+                                'text' => 'Caratulas de corte',
+                                'icon' => 'fas fa-layer-group',
+                                'url' => '#'
+                            ],
+                            [
+                                'text' => 'Corte de taquilla',
+                                'icon' => 'fas fa-layer-group',
+                                'url' => '#'
+                            ],
+                            [
+                                'text' => 'Relación cancelados',
+                                'icon' => 'fas fa-layer-group',
+                                'url' => '#'
+                            ],
+                            [
+                                'text' => 'Vendidos cancelados',
+                                'icon' => 'fas fa-layer-group',
+                                'url' => '#'
+                            ],
+                            [
+                                'text' => 'Relación Tps IMSS',
+                                'icon' => 'fas fa-layer-group',
+                                'url' => '#'
+                            ],
+                            [
+                                'text' => 'Relación fideicomisos',
+                                'icon' => 'fas fa-layer-group',
+                                'url' => '#'
+                            ],
+                            [
+                                'text' => 'Fideicomisos cancelados',
+                                'icon' => 'fas fa-layer-group',
+                                'url' => '#'
+                            ]
+                    ]
+                ]
+        /*[
+            'header' => 'Ventas',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Estadísticas',
+                    'url'  => 'taquilla',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'Corrección depósitos',
+                    'url'  => 'taquilla',
+                    'icon' => 'fas fa-fw fa-user',
+                ]
+            ],
+        ]*/
+        
+        /* ['header' => 'account_settings'],
         [
             'text' => 'Editar perfil',
             'url'  => 'perfil',
@@ -329,44 +587,12 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
-        /* [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ], */
+        [
+            'text' => 'change_password',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-lock',
+        ] */
+        
         /* ['header' => 'labels'],
         [
             'text'       => 'important',

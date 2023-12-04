@@ -7,7 +7,7 @@ use Livewire\Component;
 class Prueba extends Component
 {
 
-    public $title = "Botón";
+    public $title = "Botón prueba";
 
     public function render()
     {

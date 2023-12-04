@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    @livewire('prueba')
+    <h2>Dashboard principal</h2>
 @stop
 
 
