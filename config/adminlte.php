@@ -325,22 +325,22 @@ return [
                 [
                     'text' => 'Taquillas',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'taquillas'
+                    'url' => 'vent_taquillas'
                 ],
                 [
                     'text' => 'Corridas',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'corridas'
+                    'url' => 'vent_corridas'
                 ],
                 [
                     'text' => 'Depósitos',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'depositos'
+                    'url' => 'vent_depositos'
                 ],
                 [
                     'text' => 'Cancelaciones',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'cancelaciones'
+                    'url' => 'vent_cancelaciones'
                 ],
                 [
                     'text' => 'Transferencias',
@@ -376,27 +376,27 @@ return [
                 [
                     'text' => 'Empleados',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'empleados'
+                    'url' => 'cat_empleados'
                 ],
                 [
                     'text' => 'Clientes',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'clientes'
+                    'url' => 'cat_clientes'
                 ],
                 [
                     'text' => 'Empresas',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'empresas'
+                    'url' => 'cat_empresas'
                 ],
                 [
                     'text' => 'Terminales',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'terminales'
+                    'url' => 'cat_terminales'
                 ],
                 [
                     'text' => 'Precios',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'precios'
+                    'url' => 'cat_precios'
                 ],
                 [
                     'text' => 'Corridas',

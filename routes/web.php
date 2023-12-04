@@ -32,40 +32,40 @@ Route::get('/perfil', function(){
     return view('profile.edit');
 })->name('editProfile');
 
-Route::get('/taquillas', function(){
-    return view('web.taquillas');
-})->name('taquillas');
+Route::get('/vent_taquillas', function(){
+    return view('web.vent_taquillas');
+})->name('vent_taquillas');
 
-Route::get('/corridas', function(){
-    return view('web.corridas');
+Route::get('/vent_corridas', function(){
+    return view('web.vent_corridas');
 })->name('corridas');
 
-Route::get('/depositos', function(){
-    return view('web.depositos');
+Route::get('/vent_depositos', function(){
+    return view('web.vent_depositos');
 })->name('depositos');
 
-Route::get('/cancelaciones', function(){
-    return view('web.cancelaciones');
+Route::get('/vent_cancelaciones', function(){
+    return view('web.vent_cancelaciones');
 })->name('cancelaciones');
 
-Route::get('/empleados', function(){
-    return view('web.empleados');
+Route::get('/cat_empleados', function(){
+    return view('web.cat_empleados');
 })->name('empleados');
 
-Route::get('/clientes', function(){
-    return view('web.clientes');
+Route::get('/cat_clientes', function(){
+    return view('web.cat_clientes');
 })->name('clientes');
 
-Route::get('/empresas', function(){
-    return view('web.empresas');
+Route::get('/cat_empresas', function(){
+    return view('web.cat_empresas');
 })->name('empresas');
 
-Route::get('/terminales', function(){
-    return view('web.terminales');
+Route::get('/cat_terminales', function(){
+    return view('web.cat_terminales');
 })->name('terminales');
 
-Route::get('/precios', function(){
-    return view('web.precios');
+Route::get('/cat_precios', function(){
+    return view('web.cat_precios');
 })->name('precios');
 
 Route::get('/cat_corridas', function(){
