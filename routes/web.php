@@ -72,4 +72,24 @@ Route::get('/cat_corridas', function(){
     return view('web.cat_corridas');
 })->name('corridas');
 
+Route::get('/moni_depositos', function(){
+    return view('web.moni_depositos');
+})->name('depositos');
+
+Route::get('/moni_terminales', function(){
+    return view('web.moni_terminales');
+})->name('m_terminales');
+
+Route::get('/moni_trafico', function(){
+    return view('web.moni_trafico');
+})->name('m_trafico');
+
+Route::get('/moni_fideicomiso', function(){
+    return view('web.moni_fideicomiso');
+})->name('m_terminales');
+
+Route::get('/moni_estadisticas', function(){
+    return view('web.moni_estadisticas');
+})->name('m_estadisticas');
+
 require __DIR__.'/auth.php';
