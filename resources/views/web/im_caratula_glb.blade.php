@@ -7,8 +7,7 @@
 @stop
 
 @section('content')
-    <h2>Catálogo de empleados</h2>
-    <livewire:prueba>
+    <h2>Sección IMSS caratula global</h2>
 @stop
 
 
