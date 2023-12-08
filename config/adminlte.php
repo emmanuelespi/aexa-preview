@@ -525,37 +525,37 @@ return [
                             [
                                 'text' => 'Caratulas de corte',
                                 'icon' => 'fas fa-layer-group',
-                                'url' => '#'
+                                'url' => 'rep_caratulas'
                             ],
                             [
                                 'text' => 'Corte de taquilla',
                                 'icon' => 'fas fa-layer-group',
-                                'url' => '#'
+                                'url' => 'rep_corte_taq'
                             ],
                             [
                                 'text' => 'Relación cancelados',
                                 'icon' => 'fas fa-layer-group',
-                                'url' => '#'
+                                'url' => 'rep_rel_cancel'
                             ],
                             [
                                 'text' => 'Vendidos cancelados',
                                 'icon' => 'fas fa-layer-group',
-                                'url' => '#'
+                                'url' => 'rep_vend_cancel'
                             ],
                             [
                                 'text' => 'Relación Tps IMSS',
                                 'icon' => 'fas fa-layer-group',
-                                'url' => '#'
+                                'url' => 'rep_rel_tps'
                             ],
                             [
                                 'text' => 'Relación fideicomisos',
                                 'icon' => 'fas fa-layer-group',
-                                'url' => '#'
+                                'url' => 'rep_rel_fideicomisos'
                             ],
                             [
                                 'text' => 'Fideicomisos cancelados',
                                 'icon' => 'fas fa-layer-group',
-                                'url' => '#'
+                                'url' => 'rep_fideicomisos_cancel'
                             ]
                     ]
                 ]

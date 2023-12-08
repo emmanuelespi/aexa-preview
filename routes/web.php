@@ -112,4 +112,33 @@ Route::get('/u_opt_fide', function(){
     return view('web.uti_optimizar_fide');
 })->name('u_optimizar_fide');
 
+Route::get('/rep_caratulas', function(){
+    return view('web.rep_caratulas');
+})->name('r_caratula');
+
+Route::get('/rep_corte_taq', function(){
+    return view('web.rep_corte_taquillas');
+})->name('r_corte_taq');
+
+Route::get('/rep_rel_cancel', function(){
+    return view('web.rep_rel_cancelados');
+})->name('r_rel_cancelados');
+
+Route::get('/rep_vend_cancel', function(){
+    return view('web.rep_vendidos_cancel');
+})->name('r_rel_vendidos');
+
+Route::get('/rep_rel_tps', function(){
+    return view('web.rep_rel_tps');
+})->name('r_rel_tps');
+
+Route::get('/rep_rel_fideicomisos', function(){
+    return view('web.rep_rel_fideicomisos');
+})->name('r_rel_fide');
+
+Route::get('/rep_fideicomisos_cancel', function(){
+    return view('web.rep_fideicomisos_cancel');
+})->name('r_fide_cancel');
+
+
 require __DIR__.'/auth.php';
