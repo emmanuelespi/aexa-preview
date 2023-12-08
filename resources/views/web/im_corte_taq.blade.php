@@ -7,8 +7,7 @@
 @stop
 
 @section('content')
-    <h2>Catálogo de empleados</h2>
-    
+    <h2>Sección IMSS corte taquilla</h2>
 @stop
 
 
