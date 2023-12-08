@@ -92,4 +92,24 @@ Route::get('/moni_estadisticas', function(){
     return view('web.moni_estadisticas');
 })->name('m_estadisticas');
 
+Route::get('/u_gen_corridas', function(){
+    return view('web.uti_gen_corridas');
+})->name('u_gen_corridas');
+
+Route::get('/u_gen_dias', function(){
+    return view('web.uti_gen_d_depositos');
+})->name('u_gen_dias_depositos');
+
+Route::get('/u_respaldo', function(){
+    return view('web.uti_resp_seguridad');
+})->name('u_respaldos');
+
+Route::get('/u_optimizar', function(){
+    return view('web.uti_optimizar');
+})->name('u_optimizar');
+
+Route::get('/u_opt_fide', function(){
+    return view('web.uti_optimizar_fide');
+})->name('u_optimizar_fide');
+
 require __DIR__.'/auth.php';

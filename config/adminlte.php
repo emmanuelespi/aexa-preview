@@ -485,39 +485,39 @@ return [
                     'icon' => 'fas fa-layer-group',
                     'url' => '#'
                 ]
-                    ]
+            ]
+        ],
+        [
+            'text' => 'Utilerias',
+            'icon' => 'fas fa-wrench',
+            'submenu' => [
+                [
+                    'text' => 'Generar corridas',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => 'u_gen_corridas'
                 ],
                 [
-                    'text' => 'Utilerias',
-                    'icon' => 'fas fa-wrench',
-                    'submenu' => [
-                        [
-                            'text' => 'Generar corridas',
-                            'icon' => 'fas fa-layer-group',
-                            'url' => '#'
-                        ],
-                        [
-                            'text' => 'Generar días depósitos',
-                            'icon' => 'fas fa-layer-group',
-                            'url' => '#'
-                        ],
-                        [
-                            'text' => 'Respaldo de seguridad',
-                            'icon' => 'fas fa-layer-group',
-                            'url' => '#'
-                        ],
-                        [
-                            'text' => 'Optimizar',
-                            'icon' => 'fas fa-layer-group',
-                            'url' => '#'
-                        ],
-                        [
-                            'text' => 'Optimizar FIDE',
-                            'icon' => 'fas fa-layer-group',
-                            'url' => '#'
-                        ]
-                    ]
+                    'text' => 'Generar días depósitos',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => 'u_gen_dias'
                 ],
+                [
+                    'text' => 'Respaldo de seguridad',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => 'u_respaldo'
+                ],
+                [
+                    'text' => 'Optimizar',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => 'u_optimizar'
+                ],
+                [
+                    'text' => 'Optimizar FIDE',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => 'u_opt_fide'
+                ]
+                ]
+            ],
                 [
                     'text' => 'Reportes',
                     'icon' => 'fas fa-file-alt',
