@@ -137,7 +137,7 @@ Route::get('/rep_rel_fideicomisos', function(){
 })->name('r_rel_fide');
 
 Route::get('/rep_fideicomisos_cancel', function(){
-    return view('web.rep_fideicomisos_cancel');
+    return view('web.rep_fidei_cancel');
 })->name('r_fide_cancel');
 
 
