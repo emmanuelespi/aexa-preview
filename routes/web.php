@@ -26,19 +26,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    
+    Route::prefix('/ventas')->group(function(){
+        Route::get('/taquillas', fn() => view('web.vent_taquillas'))->name('vent_taquillas');
+        Route::get('/corridas', fn() => view('web.vent_corridas'))->name('vent_corridas');
+
+    });
+
 });
-
-Route::get('/perfil', function(){
-    return view('profile.edit');
-})->name('editProfile');
-
-Route::get('/vent_taquillas', function(){
-    return view('web.vent_taquillas');
-})->name('vent_taquillas');
-
-Route::get('/vent_corridas', function(){
-    return view('web.vent_corridas');
-})->name('corridas');
 
 Route::get('/vent_depositos', function(){
     return view('web.vent_depositos');
