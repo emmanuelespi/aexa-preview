@@ -376,32 +376,32 @@ return [
                 [
                     'text' => 'Empleados',
                     'icon' => 'fas fa-layer-group',
-                    'url' => '#'
+                    'url' => 'catalogos/empleados/'
                 ],
                 [
                     'text' => 'Clientes',
                     'icon' => 'fas fa-layer-group',
-                    'url' => '#'
+                    'url' => 'catalogos/clientes/'
                 ],
                 [
                     'text' => 'Empresas',
                     'icon' => 'fas fa-layer-group',
-                    'url' => '#'
+                    'url' => 'catalogos/empresas/'
                 ],
                 [
                     'text' => 'Terminales',
                     'icon' => 'fas fa-layer-group',
-                    'url' => '#'
+                    'url' => 'catalogos/terminales/'
                 ],
                 [
                     'text' => 'Precios',
                     'icon' => 'fas fa-layer-group',
-                    'url' => '#'
+                    'url' => 'catalogos/precios/'
                 ],
                 [
                     'text' => 'Corridas',
                     'icon' => 'fas fa-layer-group',
-                    'url' => '#'
+                    'url' => 'catalogos/corridas/'
                 ],
                 [
                     'text' => 'Descuentos',

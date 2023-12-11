@@ -33,6 +33,15 @@ Route::middleware('auth')->group(function () {
         Route::get('/depositos', fn() => view('web.ventas.vent_depositos'))->name('vent_depositos');
         Route::get('/cancelaciones', fn() => view('web.ventas.vent_cancelaciones'))->name('vent_cancelaciones');
     });
+
+    Route::prefix('/catalogos')->group(function(){
+        Route::get('/empleados', fn() => view('web.catalogos.cat_empleados'))->name('cat_empleados');
+        Route::get('/clientes', fn() => view('web.catalogos.cat_clientes'))->name('cat_clientes');
+        Route::get('/empresas', fn() => view('web.catalogos.cat_empresas'))->name('cat_empresas');
+        Route::get('/terminales', fn() => view('web.catalogos.cat_terminales'))->name('cat_terminales');
+        Route::get('/precios', fn() => view('web.catalogos.cat_precios'))->name('cat_precios');
+        Route::get('/corridas', fn() => view('web.catalogos.cat_corridas'))->name('cat_corridas');        
+    });
 });
 
 
