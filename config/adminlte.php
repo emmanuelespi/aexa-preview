@@ -491,74 +491,74 @@ return [
             'text' => 'Utilerias',
             'icon' => 'fas fa-wrench',
             'submenu' => [
-                [
-                    'text' => 'Generar corridas',
-                    'icon' => 'fas fa-layer-group',
-                    'url' => '#'
-                ],
-                [
-                    'text' => 'Generar días depósitos',
-                    'icon' => 'fas fa-layer-group',
-                    'url' => '#'
-                ],
-                [
-                    'text' => 'Respaldo de seguridad',
-                    'icon' => 'fas fa-layer-group',
-                    'url' => '#'
-                ],
-                [
-                    'text' => 'Optimizar',
-                    'icon' => 'fas fa-layer-group',
-                    'url' => '#'
-                ],
-                [
-                    'text' => 'Optimizar FIDE',
-                    'icon' => 'fas fa-layer-group',
-                    'url' => '#'
-                ]
-                ]
-            ],
-                [
-                    'text' => 'Reportes',
-                    'icon' => 'fas fa-file-alt',
-                    'submenu' => [
-                            [
-                                'text' => 'Caratulas de corte',
-                                'icon' => 'fas fa-layer-group',
-                                'url' => '#'
-                            ],
-                            [
-                                'text' => 'Corte de taquilla',
-                                'icon' => 'fas fa-layer-group',
-                                'url' => '#'
-                            ],
-                            [
-                                'text' => 'Relación cancelados',
-                                'icon' => 'fas fa-layer-group',
-                                'url' => '#'
-                            ],
-                            [
-                                'text' => 'Vendidos cancelados',
-                                'icon' => 'fas fa-layer-group',
-                                'url' => '#'
-                            ],
-                            [
-                                'text' => 'Relación Tps IMSS',
-                                'icon' => 'fas fa-layer-group',
-                                'url' => '#'
-                            ],
-                            [
-                                'text' => 'Relación fideicomisos',
-                                'icon' => 'fas fa-layer-group',
-                                'url' => '#'
-                            ],
-                            [
-                                'text' => 'Fideicomisos cancelados',
-                                'icon' => 'fas fa-layer-group',
-                                'url' => '#'
-                            ]
+                    [
+                        'text' => 'Generar corridas',
+                        'icon' => 'fas fa-layer-group',
+                        'url' => 'utilerias/generar_corridas'
+                    ],
+                    [
+                        'text' => 'Generar días depósitos',
+                        'icon' => 'fas fa-layer-group',
+                        'url' => 'utilerias/generar_dias_depositos'
+                    ],
+                    [
+                        'text' => 'Respaldo de seguridad',
+                        'icon' => 'fas fa-layer-group',
+                        'url' => 'utilerias/respaldo_seguridad'
+                    ],
+                    [
+                        'text' => 'Optimizar',
+                        'icon' => 'fas fa-layer-group',
+                        'url' => 'utilerias/optimizar'
+                    ],
+                    [
+                        'text' => 'Optimizar FIDE',
+                        'icon' => 'fas fa-layer-group',
+                        'url' => 'utilerias/optimizar_fide'
                     ]
                 ]
+            ],
+            [
+                'text' => 'Reportes',
+                'icon' => 'fas fa-file-alt',
+                'submenu' => [
+                        [
+                            'text' => 'Caratulas de corte',
+                            'icon' => 'fas fa-layer-group',
+                            'url' => '#'
+                        ],
+                        [
+                            'text' => 'Corte de taquilla',
+                            'icon' => 'fas fa-layer-group',
+                            'url' => '#'
+                        ],
+                        [
+                            'text' => 'Relación cancelados',
+                            'icon' => 'fas fa-layer-group',
+                            'url' => '#'
+                        ],
+                        [
+                            'text' => 'Vendidos cancelados',
+                            'icon' => 'fas fa-layer-group',
+                            'url' => '#'
+                        ],
+                        [
+                            'text' => 'Relación Tps IMSS',
+                            'icon' => 'fas fa-layer-group',
+                            'url' => '#'
+                        ],
+                        [
+                            'text' => 'Relación fideicomisos',
+                            'icon' => 'fas fa-layer-group',
+                            'url' => '#'
+                        ],
+                        [
+                            'text' => 'Fideicomisos cancelados',
+                            'icon' => 'fas fa-layer-group',
+                            'url' => '#'
+                        ]
+                ]
+            ]
         /*[
             'header' => 'Ventas',
             'icon'    => 'fas fa-fw fa-share',

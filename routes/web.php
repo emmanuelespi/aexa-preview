@@ -58,6 +58,14 @@ Route::middleware('auth')->group(function () {
         Route::get('/rel_cancelados', fn() => view('web.imss.im_cancelados'))->name('imss_cancelados');
         Route::get('/estatidistica', fn() => view('web.imss.im_estadisticas'))->name('imss_estadisticas');
     });
+
+    Route::prefix('/utilerias')->group(function(){
+        Route::get('/generar_corridas', fn() => view('web.utilerias.uti_gen_corridas'))->name('uti_gen_corridas');
+        Route::get('/generar_dias_depositos', fn() => view('web.utilerias.uti_gen_d_depositos'))->name('uti_gen_dias_depositos');
+        Route::get('/respaldo_seguridad', fn() => view('web.utilerias.uti_resp_seguridad'))->name('uti_respaldos');
+        Route::get('/optimizar', fn() => view('web.utilerias.uti_optimizar'))->name('uti_optimizar');
+        Route::get('/optimizar_fide', fn() => view('web.utilerias.uti_optimizar_fide'))->name('uti_optimizar_fide');
+    });
 });
 
 
