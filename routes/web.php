@@ -28,44 +28,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     
     Route::prefix('/ventas')->group(function(){
-        Route::get('/taquillas', fn() => view('web.vent_taquillas'))->name('vent_taquillas');
-        Route::get('/corridas', fn() => view('web.vent_corridas'))->name('vent_corridas');
-
+        Route::get('/taquillas', fn() => view('web.ventas.vent_taquillas'))->name('vent_taquillas');
+        Route::get('/corridas', fn() => view('web.ventas.vent_corridas'))->name('vent_corridas');
+        Route::get('/depositos', fn() => view('web.ventas.vent_depositos'))->name('vent_depositos');
+        Route::get('/cancelaciones', fn() => view('web.ventas.vent_cancelaciones'))->name('vent_cancelaciones');
     });
-
 });
 
-Route::get('/vent_depositos', function(){
-    return view('web.vent_depositos');
-})->name('depositos');
-
-Route::get('/vent_cancelaciones', function(){
-    return view('web.vent_cancelaciones');
-})->name('cancelaciones');
-
-Route::get('/cat_empleados', function(){
-    return view('web.cat_empleados');
-})->name('empleados');
-
-Route::get('/cat_clientes', function(){
-    return view('web.cat_clientes');
-})->name('clientes');
-
-Route::get('/cat_empresas', function(){
-    return view('web.cat_empresas');
-})->name('empresas');
-
-Route::get('/cat_terminales', function(){
-    return view('web.cat_terminales');
-})->name('terminales');
-
-Route::get('/cat_precios', function(){
-    return view('web.cat_precios');
-})->name('precios');
-
-Route::get('/cat_corridas', function(){
-    return view('web.cat_corridas');
-})->name('corridas');
 
 Route::get('/moni_depositos', function(){
     return view('web.moni_depositos');

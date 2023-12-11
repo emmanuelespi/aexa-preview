@@ -325,22 +325,22 @@ return [
                 [
                     'text' => 'Taquillas',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'vent_taquillas'
+                    'url' => 'ventas/taquillas/'
                 ],
                 [
                     'text' => 'Corridas',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'vent_corridas'
+                    'url' => 'ventas/corridas/'
                 ],
                 [
                     'text' => 'Depósitos',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'vent_depositos'
+                    'url' => 'ventas/depositos/'
                 ],
                 [
                     'text' => 'Cancelaciones',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'vent_cancelaciones'
+                    'url' => 'ventas/cancelaciones/'
                 ],
                 [
                     'text' => 'Transferencias',
@@ -376,32 +376,32 @@ return [
                 [
                     'text' => 'Empleados',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'cat_empleados'
+                    'url' => '#'
                 ],
                 [
                     'text' => 'Clientes',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'cat_clientes'
+                    'url' => '#'
                 ],
                 [
                     'text' => 'Empresas',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'cat_empresas'
+                    'url' => '#'
                 ],
                 [
                     'text' => 'Terminales',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'cat_terminales'
+                    'url' => '#'
                 ],
                 [
                     'text' => 'Precios',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'cat_precios'
+                    'url' => '#'
                 ],
                 [
                     'text' => 'Corridas',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'cat_corridas'
+                    'url' => '#'
                 ],
                 [
                     'text' => 'Descuentos',
@@ -432,27 +432,27 @@ return [
                 [
                     'text' => 'Depósitos',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'moni_depositos'
+                    'url' => '#'
                 ],
                 [
                     'text' => 'Terminales',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'moni_terminales'
+                    'url' => '#'
                 ],
                 [
                     'text' => 'Tráfico',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'moni_trafico'
+                    'url' => '#'
                 ],
                 [
                     'text' => 'Fideicomiso',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'moni_fideicomiso'
+                    'url' => '#'
                 ],
                 [
                     'text' => 'Estadísticas',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'moni_estadisticas'
+                    'url' => '#'
                 ]
             ]
         ],
@@ -494,27 +494,27 @@ return [
                 [
                     'text' => 'Generar corridas',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'u_gen_corridas'
+                    'url' => '#'
                 ],
                 [
                     'text' => 'Generar días depósitos',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'u_gen_dias'
+                    'url' => '#'
                 ],
                 [
                     'text' => 'Respaldo de seguridad',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'u_respaldo'
+                    'url' => '#'
                 ],
                 [
                     'text' => 'Optimizar',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'u_optimizar'
+                    'url' => '#'
                 ],
                 [
                     'text' => 'Optimizar FIDE',
                     'icon' => 'fas fa-layer-group',
-                    'url' => 'u_opt_fide'
+                    'url' => '#'
                 ]
                 ]
             ],
@@ -525,37 +525,37 @@ return [
                             [
                                 'text' => 'Caratulas de corte',
                                 'icon' => 'fas fa-layer-group',
-                                'url' => 'rep_caratulas'
+                                'url' => '#'
                             ],
                             [
                                 'text' => 'Corte de taquilla',
                                 'icon' => 'fas fa-layer-group',
-                                'url' => 'rep_corte_taq'
+                                'url' => '#'
                             ],
                             [
                                 'text' => 'Relación cancelados',
                                 'icon' => 'fas fa-layer-group',
-                                'url' => 'rep_rel_cancel'
+                                'url' => '#'
                             ],
                             [
                                 'text' => 'Vendidos cancelados',
                                 'icon' => 'fas fa-layer-group',
-                                'url' => 'rep_vend_cancel'
+                                'url' => '#'
                             ],
                             [
                                 'text' => 'Relación Tps IMSS',
                                 'icon' => 'fas fa-layer-group',
-                                'url' => 'rep_rel_tps'
+                                'url' => '#'
                             ],
                             [
                                 'text' => 'Relación fideicomisos',
                                 'icon' => 'fas fa-layer-group',
-                                'url' => 'rep_rel_fideicomisos'
+                                'url' => '#'
                             ],
                             [
                                 'text' => 'Fideicomisos cancelados',
                                 'icon' => 'fas fa-layer-group',
-                                'url' => 'rep_fideicomisos_cancel'
+                                'url' => '#'
                             ]
                     ]
                 ]
