@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <h2>Reporte fideicomisos cancelados</h2>
+    <h2>Reporte vendidos cancelados</h2>
     
 @stop
 

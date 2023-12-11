@@ -66,56 +66,17 @@ Route::middleware('auth')->group(function () {
         Route::get('/optimizar', fn() => view('web.utilerias.uti_optimizar'))->name('uti_optimizar');
         Route::get('/optimizar_fide', fn() => view('web.utilerias.uti_optimizar_fide'))->name('uti_optimizar_fide');
     });
+
+    Route::prefix('/reportes')->group(function(){
+        Route::get('/reporte_caratulas', fn() => view('web.reportes.rep_caratulas'))->name('repor_caratulas');
+        Route::get('/reporte_corte_taquillas', fn() => view('web.reportes.rep_corte_taquillas'))->name('repor_corte_taquillas');
+        Route::get('/reporte_cancelados', fn() => view('web.reportes.rep_rel_cancelados'))->name('repor_cancelados');
+        Route::get('/reporte_vendidos_cancel', fn() => view('web.reportes.rep_vendidos_cancel'))->name('repor_vendidos_cancelados');
+        Route::get('/reporte_rel_tps', fn() => view('web.reportes.rep_rel_tps'))->name('repor_relacion_tps');
+        Route::get('/reporte_rel_fideicomisos', fn() => view('web.reportes.rep_rel_fideicomisos'))->name('repor_rel_fideicomisos');
+        Route::get('/reporte_fide_cancelados', fn() => view('web.reportes.rep_fidei_cancel'))->name('repor_fideicomisos_cancel');
+    });
 });
-
-
-Route::get('/u_gen_corridas', function(){
-    return view('web.uti_gen_corridas');
-})->name('u_gen_corridas');
-
-Route::get('/u_gen_dias', function(){
-    return view('web.uti_gen_d_depositos');
-})->name('u_gen_dias_depositos');
-
-Route::get('/u_respaldo', function(){
-    return view('web.uti_resp_seguridad');
-})->name('u_respaldos');
-
-Route::get('/u_optimizar', function(){
-    return view('web.uti_optimizar');
-})->name('u_optimizar');
-
-Route::get('/u_opt_fide', function(){
-    return view('web.uti_optimizar_fide');
-})->name('u_optimizar_fide');
-
-Route::get('/rep_caratulas', function(){
-    return view('web.rep_caratulas');
-})->name('r_caratula');
-
-Route::get('/rep_corte_taq', function(){
-    return view('web.rep_corte_taquillas');
-})->name('r_corte_taq');
-
-Route::get('/rep_rel_cancel', function(){
-    return view('web.rep_rel_cancelados');
-})->name('r_rel_cancelados');
-
-Route::get('/rep_vend_cancel', function(){
-    return view('web.rep_vendidos_cancel');
-})->name('r_rel_vendidos');
-
-Route::get('/rep_rel_tps', function(){
-    return view('web.rep_rel_tps');
-})->name('r_rel_tps');
-
-Route::get('/rep_rel_fideicomisos', function(){
-    return view('web.rep_rel_fideicomisos');
-})->name('r_rel_fide');
-
-Route::get('/rep_fideicomisos_cancel', function(){
-    return view('web.rep_fidei_cancel');
-})->name('r_fide_cancel');
 
 
 require __DIR__.'/auth.php';

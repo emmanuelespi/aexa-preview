@@ -525,37 +525,37 @@ return [
                         [
                             'text' => 'Caratulas de corte',
                             'icon' => 'fas fa-layer-group',
-                            'url' => '#'
+                            'url' => 'reportes/reporte_caratulas'
                         ],
                         [
                             'text' => 'Corte de taquilla',
                             'icon' => 'fas fa-layer-group',
-                            'url' => '#'
+                            'url' => 'reportes/reporte_corte_taquillas'
                         ],
                         [
                             'text' => 'Relación cancelados',
                             'icon' => 'fas fa-layer-group',
-                            'url' => '#'
+                            'url' => 'reportes/reporte_cancelados'
                         ],
                         [
                             'text' => 'Vendidos cancelados',
                             'icon' => 'fas fa-layer-group',
-                            'url' => '#'
+                            'url' => 'reportes/reporte_vendidos_cancel'
                         ],
                         [
                             'text' => 'Relación Tps IMSS',
                             'icon' => 'fas fa-layer-group',
-                            'url' => '#'
+                            'url' => 'reportes/reporte_rel_tps'
                         ],
                         [
                             'text' => 'Relación fideicomisos',
                             'icon' => 'fas fa-layer-group',
-                            'url' => '#'
+                            'url' => 'reportes/reporte_rel_fideicomisos'
                         ],
                         [
                             'text' => 'Fideicomisos cancelados',
                             'icon' => 'fas fa-layer-group',
-                            'url' => '#'
+                            'url' => 'reportes/reporte_fide_cancelados'
                         ]
                 ]
             ]
