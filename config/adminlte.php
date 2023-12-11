@@ -432,27 +432,27 @@ return [
                 [
                     'text' => 'Depósitos',
                     'icon' => 'fas fa-layer-group',
-                    'url' => '#'
+                    'url' => 'monitoreo/depositos/'
                 ],
                 [
                     'text' => 'Terminales',
                     'icon' => 'fas fa-layer-group',
-                    'url' => '#'
+                    'url' => 'monitoreo/terminales/'
                 ],
                 [
                     'text' => 'Tráfico',
                     'icon' => 'fas fa-layer-group',
-                    'url' => '#'
+                    'url' => 'monitoreo/trafico/'
                 ],
                 [
                     'text' => 'Fideicomiso',
                     'icon' => 'fas fa-layer-group',
-                    'url' => '#'
+                    'url' => 'monitoreo/fideicomiso/'
                 ],
                 [
                     'text' => 'Estadísticas',
                     'icon' => 'fas fa-layer-group',
-                    'url' => '#'
+                    'url' => 'monitoreo/estadisticas/'
                 ]
             ]
         ],

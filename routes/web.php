@@ -42,6 +42,14 @@ Route::middleware('auth')->group(function () {
         Route::get('/precios', fn() => view('web.catalogos.cat_precios'))->name('cat_precios');
         Route::get('/corridas', fn() => view('web.catalogos.cat_corridas'))->name('cat_corridas');        
     });
+
+    Route::prefix('/monitoreo')->group(function(){
+        Route::get('/depositos', fn() => view('web.monitor.moni_depositos'))->name('moni_depositos');
+        Route::get('/terminales', fn() => view('web.monitor.moni_terminales'))->name('moni_terminales');
+        Route::get('/trafico', fn() => view('web.monitor.moni_trafico'))->name('moni_trafico');
+        Route::get('/fideicomiso', fn() => view('web.monitor.moni_fideicomiso'))->name('moni_fideicomiso');
+        Route::get('/estadisticas', fn() => view('web.monitor.moni_estadisticas'))->name('moni_estadisticas');
+    });
 });
 
 
