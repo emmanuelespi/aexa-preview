@@ -50,28 +50,16 @@ Route::middleware('auth')->group(function () {
         Route::get('/fideicomiso', fn() => view('web.monitor.moni_fideicomiso'))->name('moni_fideicomiso');
         Route::get('/estadisticas', fn() => view('web.monitor.moni_estadisticas'))->name('moni_estadisticas');
     });
+
+    Route::prefix('/imss')->group(function(){
+        Route::get('/registro', fn() => view('web.imss.im_registro'))->name('imss_registro');
+        Route::get('/caratula_global', fn() => view('web.imss.im_caratula_glb'))->name('imss_caratula');
+        Route::get('/corte_taquilla', fn() => view('web.imss.im_corte_taq'))->name('imss_corte_taqui');
+        Route::get('/rel_cancelados', fn() => view('web.imss.im_cancelados'))->name('imss_cancelados');
+        Route::get('/estatidistica', fn() => view('web.imss.im_estadisticas'))->name('imss_estadisticas');
+    });
 });
 
-
-Route::get('/moni_depositos', function(){
-    return view('web.moni_depositos');
-})->name('depositos');
-
-Route::get('/moni_terminales', function(){
-    return view('web.moni_terminales');
-})->name('m_terminales');
-
-Route::get('/moni_trafico', function(){
-    return view('web.moni_trafico');
-})->name('m_trafico');
-
-Route::get('/moni_fideicomiso', function(){
-    return view('web.moni_fideicomiso');
-})->name('m_terminales');
-
-Route::get('/moni_estadisticas', function(){
-    return view('web.moni_estadisticas');
-})->name('m_estadisticas');
 
 Route::get('/u_gen_corridas', function(){
     return view('web.uti_gen_corridas');

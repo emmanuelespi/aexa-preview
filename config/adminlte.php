@@ -463,27 +463,27 @@ return [
                 [
                     'text' => 'Registro',
                     'icon' => 'fas fa-layer-group',
-                    'url' => '#'
+                    'url' => 'imss/registro/'
                 ],
                 [
                     'text' => 'Caratula global',
                     'icon' => 'fas fa-layer-group',
-                    'url' => '#'
+                    'url' => 'imss/caratula_global/'
                 ],
                 [
                     'text' => 'Corte de taquilla',
                     'icon' => 'fas fa-layer-group',
-                    'url' => '#'
+                    'url' => 'imss/corte_taquilla/'
                 ],
                 [
                     'text' => 'Relación cancelados',
                     'icon' => 'fas fa-layer-group',
-                    'url' => '#'
+                    'url' => 'imss/rel_cancelados/'
                 ],
                 [
                     'text' => 'Estadísticas',
                     'icon' => 'fas fa-layer-group',
-                    'url' => '#'
+                    'url' => 'imss/estatidistica/'
                 ]
             ]
         ],
