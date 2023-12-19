@@ -319,57 +319,22 @@ return [
             'label_color' => 'success',
         ], */
         [
-            'text' => 'Ventas',
-            'icon' => 'fas fa-shopping-bag',
+            'text' => 'Configuración',
+            'icon' => 'fas fa-cogs',
             'submenu' => [
                 [
-                    'text' => 'Taquillas',
-                    'icon' => 'fas fa-layer-group',
-                    'url' => 'ventas/taquillas/'
+                    'text' => 'Roles',
+                    'icon' => 'fas fa-user-lock',
+                    'url' => '/roles'
                 ],
                 [
-                    'text' => 'Corridas',
-                    'icon' => 'fas fa-layer-group',
-                    'url' => 'ventas/corridas/'
-                ],
-                [
-                    'text' => 'Depósitos',
-                    'icon' => 'fas fa-layer-group',
-                    'url' => 'ventas/depositos/'
-                ],
-                [
-                    'text' => 'Cancelaciones',
-                    'icon' => 'fas fa-layer-group',
-                    'url' => 'ventas/cancelaciones/'
-                ],
-                [
-                    'text' => 'Transferencias',
-                    'icon' => 'fas fa-layer-group',
-                    'url' => '#'
-                ],
-                [
-                    'text' => 'Liberar lugares',
-                    'icon' => 'fas fa-layer-group',
-                    'url' => '#'
-                ],
-                [
-                    'text' => 'Depósitos FIDE',
-                    'icon' => 'fas fa-layer-group',
-                    'url' => '#'
-                ],
-                [
-                    'text' => 'Depósitos FIDE',
-                    'icon' => 'fas fa-layer-group',
-                    'url' => '#'
-                ],
-                [
-                    'text' => 'Depósitos FIDE',
-                    'icon' => 'fas fa-layer-group',
+                    'text' => 'Usuarios',
+                    'icon' => 'fas fa-users',
                     'url' => '#'
                 ]
             ]
-                ],
-        [
+        ],
+        /*[
             'text' => 'Catálogos',
             'icon' => 'fas fa-table',
             'submenu' => [
