@@ -334,6 +334,42 @@ return [
                 ]
             ]
         ],
+        [
+            'text' => 'Catálogos',
+            'icon' => 'fas fa-layer-group',
+            'submenu' => [
+                [
+                    'text' => 'Empresas',
+                    'icon' => 'fas fa-building',
+                    'url' => 'catalogos/empresas/'
+                ],
+                [
+                    'text' => 'Empleados',
+                    'icon' => 'fas fa-user-tie',
+                    'url' => 'catalogos/empleados/'
+                ],
+                [
+                    'text' => 'Clientes',
+                    'icon' => 'fas fa-user-friends',
+                    'url' => 'catalogos/clientes/'
+                ],
+                [
+                    'text' => 'Corridas',
+                    'icon' => 'fas fa-road',
+                    'url' => 'catalogos/corridas/'
+                ],
+                [
+                    'text' => 'Terminales',
+                    'icon' => 'fas fa-map-marked-alt',
+                    'url' => 'catalogos/terminales/'
+                ],
+                [
+                    'text' => 'Precios',
+                    'icon' => 'fas fa-dollar-sign',
+                    'url' => 'catalogos/precios/'
+                ]
+            ]
+        ]
         /*[
             'text' => 'Catálogos',
             'icon' => 'fas fa-table',
