@@ -13,23 +13,24 @@ return new class extends Migration
     {
         Schema::create('empresa', function (Blueprint $table) {
             $table->id();
-            $table->clave();
-            $table->nombre();
-            $table->razon_social();
-            $table->rfc();
-            $table->direccion_fiscal();
-            $table->num_exterior();
-            $table->num_interior();
-            $table->localidad();
-            $table->colonia();
-            $table->ciudad();
-            $table->estado();
-            $table->pais();
-            $table->cp();
-            $table->telefono();
-            $table->estatus();
-            $table->timestamps();
+            $table->string('clave', 10);
+            $table->string('nombre', 80);
+            $table->string('razon_social', 80);
+            $table->string('rfc', 20);
+            $table->string('direccion_fiscal', 150);
+            $table->integer('num_exterior')->nullable();
+            $table->integer('num_interior')->nullable();
+            $table->string('localidad', 100);
+            $table->string('colonia', 150);
+            $table->string('ciudad', 100);
+            $table->string('estado', 50);
+            $table->string('pais', 50);
+            $table->string('cp', 10);
+            $table->string('telefono', 15);
+            $table->tinyInteger('estatus')->default(1);
             $table->softDeletes();
+            $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 
