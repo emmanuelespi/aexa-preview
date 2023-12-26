@@ -339,29 +339,34 @@ return [
             'icon' => 'fas fa-layer-group',
             'submenu' => [
                 [
-                    'text' => 'Empresas',
+                    'text' => 'Empresa',
                     'icon' => 'fas fa-building',
                     'url' => 'catalogos/empresas/'
                 ],
                 [
                     'text' => 'Empleados',
-                    'icon' => 'fas fa-user-tie',
+                    'icon' => 'fas fa-users',
                     'url' => 'catalogos/empleados/'
                 ],
                 [
-                    'text' => 'Clientes',
-                    'icon' => 'fas fa-user-friends',
-                    'url' => 'catalogos/clientes/'
-                ],
-                [
-                    'text' => 'Corridas',
-                    'icon' => 'fas fa-road',
-                    'url' => 'catalogos/corridas/'
+                    'text' => 'Operadores',
+                    'icon' => 'fas fa-user-tie',
+                    'url' => '#'
                 ],
                 [
                     'text' => 'Terminales',
                     'icon' => 'fas fa-map-marked-alt',
                     'url' => 'catalogos/terminales/'
+                ],
+                [
+                    'text' => 'Autobuses',
+                    'icon' => 'fas fa-bus',
+                    'url' => '#'
+                ],
+                [
+                    'text' => 'Corridas',
+                    'icon' => 'fas fa-road',
+                    'url' => '#'
                 ],
                 [
                     'text' => 'Precios',
