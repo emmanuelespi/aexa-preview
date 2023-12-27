@@ -351,7 +351,7 @@ return [
                 [
                     'text' => 'Perfiles',
                     'icon' => 'fas fa-user-check',
-                    'url' => '#'
+                    'url' => 'catalogos/perfiles/'
                 ],
                 [
                     'text' => 'Operadores',
