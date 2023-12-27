@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('taquilla', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre_taquilla', 25);
+            $table->integer('numero_taquilla')->nullable();
+            $table->string('abreviacion', 10);
+            $table->tinyInteger('estatus')->default(1);
             $table->timestamps();
+            $table->softDeletes();
+            $table->engine = 'InnoDB';
         });
     }
 
