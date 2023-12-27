@@ -349,6 +349,11 @@ return [
                     'url' => 'catalogos/empleados/'
                 ],
                 [
+                    'text' => 'Perfiles',
+                    'icon' => 'fas fa-user-check',
+                    'url' => '#'
+                ],
+                [
                     'text' => 'Operadores',
                     'icon' => 'fas fa-user-tie',
                     'url' => '#'
