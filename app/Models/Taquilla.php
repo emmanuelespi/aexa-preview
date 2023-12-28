@@ -10,6 +10,7 @@ class Taquilla extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
     protected $table = 'taquilla';
 
     protected $fillable = [
@@ -19,4 +20,9 @@ class Taquilla extends Model
         'estatus',
         'id_terminal'
     ];
+
+    public function terminal()
+    {
+        return $this->belongsTo(Terminal::class,'id');
+    }
 }

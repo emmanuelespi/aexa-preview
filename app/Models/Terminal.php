@@ -10,6 +10,7 @@ class Terminal extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
     protected $table = "terminal";
 
     protected $fillable = [
@@ -21,4 +22,9 @@ class Terminal extends Model
         'estatus',
         'deleted_at'
     ];
+
+    public function taquillas()
+    {
+        return $this->hasMany(Taquilla::class,'id');
+    }
 }
