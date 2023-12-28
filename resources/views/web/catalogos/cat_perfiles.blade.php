@@ -1,6 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
+@include('modals.modal_nuevo_perfil')
 <section class="section">
     <div class="section-header">
         <div class="row">
@@ -10,6 +11,14 @@
                 <p class="text-primary text-right">Empresa: </p>
             </div>
         </div>
+        <div class="row">
+            <div class="col-6"></div>
+            <div class="col-3"></div>
+            <div class="col-3">
+                <a class="btn btn-primary btn-sm btn-block rounded-3 " role="button" data-toggle="modal" data-target="#modalAgregarPerfil">Nuevo perfil <i class="fas fa-plus"></i></a>
+            </div>
+        </div>
+        <br>
     </div>
     <div class="section-body">
         <div class="row">
@@ -75,5 +84,5 @@
                 }
             });
         });
-    </script>
+    </script>    
 @endsection
