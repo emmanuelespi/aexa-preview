@@ -29,7 +29,14 @@ class RolController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'nombre_rol' => 'required|string|max:255',
+        ]);
+
+        $role = Role::create(['name' => $request->input('nombre_rol')]);
+        $role->syncPermissions($request->input('permission'));
+
+        
     }
 
     /**

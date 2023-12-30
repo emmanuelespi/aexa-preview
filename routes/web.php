@@ -5,6 +5,7 @@ use App\Http\Controllers\TerminalController;
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\TaquillaController;
 use App\Http\Controllers\PerfilController;
+use App\Http\Controllers\RolController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,7 +29,9 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('/roles', fn() => view('web.roles.index'))->name('roles.index');
+    Route::get('/roles', [RolController::class, 'index'])->name('roles.index');
+    Route::get('/roles/create', [RolController::class,'create'])->name('roles.create');
+    Route::post('/roles/store', [RolController::class, 'store'])->name('roles.store');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
