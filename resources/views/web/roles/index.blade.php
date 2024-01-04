@@ -59,7 +59,7 @@
             "paging": true,
             "lengthChange": true,
             "searching": true,
-            "ordering": true,
+            "ordering": false,
             "info": true,
             "autoWidth": false,
             "lengthMenu": [5, 10, 25, 50],
@@ -81,6 +81,23 @@
                 },
                 "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
             }
+        });
+
+        $('#modalAgregarRol form').submit(function(e){
+            e.preventDefault();
+
+            swal.fire({
+                title: '¿Estás seguro?',
+                text: '¿Deseas guardar este rol?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText : 'Si, guardar.',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if(result.isConfirmed){
+                    $('#formNuevoRol').unbind('submit').submit();
+                }
+            });
         });
     });
 </script>

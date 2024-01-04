@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Validator;
 
 class RolController extends Controller
 {
@@ -29,14 +30,20 @@ class RolController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'nombre_rol' => 'required|string|max:255',
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|unique:roles,name',
         ]);
 
-        $role = Role::create(['name' => $request->input('nombre_rol')]);
-        $role->syncPermissions($request->input('permission'));
+        if($validator->fails())
+        {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
 
-        
+        $role = Role::create([
+            'name' => $request->input('name'),
+        ]);
+
+        return redirect()->route('roles.index')->with('success','Rol creado exitosamente.');
     }
 
     /**

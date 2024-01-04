@@ -38,3 +38,7 @@
 @extends('adminlte::page')
 
 @section('title','AEXA Preview')
+
+@if(config('adminlte.plugings.Sweetalert2.active'))
+    <script src="{{ config('adminlte.plugins.Sweetalert2.files')[0]['location'] }}"></script>    
+@endif
