@@ -48,10 +48,6 @@
 </section>
 @endsection
 
-@section('css')
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
-@endsection
-
 @section('js')
 <script>
     $(function() {

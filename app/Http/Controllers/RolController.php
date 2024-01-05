@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 use Illuminate\Support\Facades\Validator;
 
 class RolController extends Controller
@@ -14,7 +15,8 @@ class RolController extends Controller
     public function index(Request $request)
     {
         $roles = Role::all();
-        return view('web.roles.index', compact('roles'));
+        $permission = Permission::all();
+        return view('web.roles.index', compact('roles', 'permission'));
     }
 
     /**

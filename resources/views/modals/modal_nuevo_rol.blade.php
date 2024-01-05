@@ -14,8 +14,22 @@
                         <label for="nombre_perfil">Nombre del rol</label>
                         <input type="text" class="form-control" id="nombre_rol" name="name" required>
                     </div>
-                    <button type="button" class="btn btn-primary" onclick="nuevoRol()">Guardar</button>
                 </form>
+                <br>
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Permisos de este rol:</label>
+                    </div>
+                </div>
+                <div id="rol" class="col-md-12">
+                    <div class="form-group">
+                        @foreach ($permission as $value)
+                        <label for="">{{ Form::checkbox('permission[]', $value->id, false, array('class' => 'name')) }}{{ $value->name }}</label>
+                        <br>
+                        @endforeach
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="nuevoRol()">Guardar</button>
             </div>
         </div>
     </div>
