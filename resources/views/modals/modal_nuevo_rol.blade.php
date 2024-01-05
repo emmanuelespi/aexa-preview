@@ -15,7 +15,6 @@
                         <input type="text" class="form-control" id="nombre_rol" name="name" required>
                     </div>
                 </form>
-                <br>
                 <div class="row">
                     <div class="col-12">
                         <label for="">Permisos de este rol:</label>
@@ -23,9 +22,12 @@
                 </div>
                 <div id="rol" class="col-md-12">
                     <div class="form-group">
-                        @foreach ($permission as $value)
-                        <label for="">{{ Form::checkbox('permission[]', $value->id, false, array('class' => 'name')) }}{{ $value->name }}</label>
-                        <br>
+                        @foreach ($permission as $item)
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="permission[]" value="{{ $item->id }}" class="name"> {{ $item->name }}
+                                </label>
+                            </div>
                         @endforeach
                     </div>
                 </div>

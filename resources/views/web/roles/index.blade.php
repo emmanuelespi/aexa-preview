@@ -6,7 +6,7 @@
 <section class="section">
     <div class="section-header">
         <div class="row">
-            <h3 class="page__heading col-4">Empresas</h3>
+            <h3 class="page__heading col-4">Roles</h3>
             <div class="col-4"></div>
             <div class="col-4">
                 <p class="text-primary text-right">Empresa: </p>

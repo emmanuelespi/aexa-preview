@@ -15,14 +15,15 @@ class PermisosSeeder extends Seeder
     public function run(): void
     {
         $permisos = [
-            'empresas',
+            'Empresas',
             'Subempresas',
-            'empleados',
-            'operadores',
-            'taquillas',
-            'autobuses',
-            'corridas',
-            'sucursales'
+            'Empleados',
+            'Operadores',
+            'Terminales',
+            'Taquillas',
+            'Autobuses',
+            'Corridas',
+            'Precios'
         ];
 
         foreach($permisos as $permiso){

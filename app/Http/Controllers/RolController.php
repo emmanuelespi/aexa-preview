@@ -32,20 +32,16 @@ class RolController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
+        $this->validate($request,[
             'name' => 'required|unique:roles,name',
+            'permission' => 'required',
         ]);
 
-        if($validator->fails())
-        {
-            return redirect()->back()->withErrors($validator)->withInput();
-        }
+        $role =  Role::create(['name' => $request->input('name')]);
+        $role->syncPermissions($request->input('permission'));
 
-        $role = Role::create([
-            'name' => $request->input('name'),
-        ]);
-
-        return redirect()->route('roles.index')->with('success','Rol creado exitosamente.');
+        $id = auth()->user->id();
+        return redirect()->route('web.roles.index');
     }
 
     /**
