@@ -1,6 +1,8 @@
 @extends('adminlte::page')
 
 @section('content')
+
+@include('modals.modal_nuevo_empleado')
     <section class="section">
         <div class="section-header">
             <div class="row">
@@ -10,7 +12,15 @@
                     <p class="text-primary text-right">Terminal:</p>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-6"></div>
+                <div class="col-4"></div>
+                <div class="col-2">
+                    <a class="btn btn-primary btn-sm btn-block rounded-3" role="button" data-toggle="modal" data-target="#modalAgregarEmpleado">Nuevo empleado<i class="fa fa-plus"></i></a>
+                </div>
+            </div>
         </div>
+        <br>
         <div class="section-body">
             <div class="row">
                 <div class="col-lg-12">
