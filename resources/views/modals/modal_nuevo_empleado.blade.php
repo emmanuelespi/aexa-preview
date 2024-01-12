@@ -23,9 +23,9 @@
                             <button class="nav-link" id="nav-contact-tab" data-toggle="tab" data-target="#nav-contact"
                                 type="button" role="tab" aria-controls="nav-contact"
                                 aria-selected="false">Domicilio</button>
-                            <button class="nav-link" id="nav-observaciones" data-toggle="tab" data-target="#nav-observaciones"
-                                type="button" role="tab" aria-controls="nav-observaciones"
-                                aria-selected="false">Observaciones</button>
+                            <button class="nav-link" id="nav-observation-tab" data-toggle="tab" data-target="#nav-observation"
+                                type="button" role="tab" aria-controls="nav-observation"
+                                aria-selected="false">Obsevaciones</button>
                         </div>
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
@@ -177,16 +177,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="nav-observaciones" role="tabpanel" aria-labelledby="nav-observaciones">
-                            <div class="row">
-                                <div class="form-group col-12">
-                                    <label for="">Observaciones:</label>
-                                    <textarea class="form-control" name="" id="" rows="4"></textarea>
-                                </div>
+                        <div class="tab-pane fade" id="nav-observation" role="tabpanel" aria-labelledby="nav-observation-tab">
+                            <div class="form-group">
+                                <label for="">Observaciones:</label>
+                                <textarea class="form-control" name="" id="" rows="3"></textarea>
                             </div>
                         </div>
                     </div>
-                
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary">Guardar</button>
