@@ -6,6 +6,7 @@ use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\TaquillaController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\RolController;
+use App\Http\Controllers\AutobusesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,14 +46,12 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('/catalogos')->group(function(){
         Route::get('/empleados', fn() => view('web.catalogos.cat_empleados'))->name('cat_empleados');
-        Route::get('/clientes', fn() => view('web.catalogos.cat_clientes'))->name('cat_clientes');
         Route::get('/empresas', [EmpresaController::class, 'index'])->name('cat_empresas');
         Route::get('/terminales', [TerminalController::class, 'index'])->name('cat_terminales');
         Route::get('/taquillas', [TaquillaController::class, 'index'])->name('cat_taquillas');
         Route::get('/precios', fn() => view('web.catalogos.cat_precios'))->name('cat_precios');
         Route::get('/perfiles', [PerfilController::class,'index'])->name('cat_perfiles');
-        Route::get('/corridas', fn() => view('web.catalogos.cat_corridas'))->name('cat_corridas');
-        
+        Route::get('/autobuses',[AutobusesController::class,'index'])->name('cat_autobuses');
     });
 
     Route::prefix('/monitoreo')->group(function(){

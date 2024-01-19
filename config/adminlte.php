@@ -366,7 +366,7 @@ return [
                 [
                     'text' => 'Autobuses',
                     'icon' => 'fas fa-bus',
-                    'url' => '#'
+                    'url' => 'catalogos/autobuses/'
                 ],
                 [
                     'text' => 'Taquillas',
