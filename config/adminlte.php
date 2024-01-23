@@ -374,6 +374,11 @@ return [
                     'url' => 'catalogos/taquillas/'
                 ],
                 [
+                    'text' => 'Plantilla',
+                    'icon' => 'fas fa-route',
+                    'url' => 'catalogos/plantilla/'
+                ],
+                [
                     'text' => 'Corridas',
                     'icon' => 'fas fa-road',
                     'url' => '#'
