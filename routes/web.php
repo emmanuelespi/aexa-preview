@@ -7,6 +7,8 @@ use App\Http\Controllers\TaquillaController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\AutobusesController;
+use App\Http\Controllers\OperadoresController;
+use App\Models\Operadores;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,6 +54,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/precios', fn() => view('web.catalogos.cat_precios'))->name('cat_precios');
         Route::get('/perfiles', [PerfilController::class,'index'])->name('cat_perfiles');
         Route::get('/autobuses',[AutobusesController::class,'index'])->name('cat_autobuses');
+        Route::get('/operadores', [OperadoresController::class,'index'])->name('cat_operadores');
     });
 
     Route::prefix('/monitoreo')->group(function(){

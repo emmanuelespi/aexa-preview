@@ -356,7 +356,7 @@ return [
                 [
                     'text' => 'Operadores',
                     'icon' => 'fas fa-user-tie',
-                    'url' => '#'
+                    'url' => 'catalogos/operadores/'
                 ],
                 [
                     'text' => 'Terminales',
