@@ -29,7 +29,39 @@ class EmpresaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'clave' => 'required',
+            'nombre_empresa' => 'required',
+            'razon_social' => 'required',
+            'rfc' => 'required',
+            'direccion_fiscal' => 'required',
+            'num_interior' => 'required',
+            'num_exterior' => 'required',
+            'localidad' => 'required',
+            'colonia' => 'required',
+            'ciudad' => 'required',
+            'estado' => 'required',
+            'cp' => 'required',
+            'pais' => 'required',
+            'telefono' => 'required'
+        ]);
+        Empresa::create([
+            'clave' => $request->input('clave'),
+            'nombre' => $request->input('nombre_empresa'), 
+            'razon_social' => $request->input('razon_social'), 
+            'rfc' => $request->input('rfc'), 
+            'direccion_fiscal' => $request->input('direccion_fiscal'), 
+            'num_interior' => $request->input('num_interior'), 
+            'num_exterior' => $request->input('num_exterior'), 
+            'localidad' => $request->input('localidad'), 
+            'colonia' => $request->input('colonia'), 
+            'ciudad' => $request->input('ciudad'), 
+            'estado' => $request->input('estado'),
+            'cp' => $request->input('cp'),
+            'pais' => $request->input('pais'), 
+            'telefono' => $request->input('telefono'), 
+            'estatus' => '1']);
+        return redirect()->route('empresas.index');
     }
 
     /**

@@ -30,7 +30,6 @@
                             <thead>
                                 <th>Nombre</th>
                                 <th>Clave</th>
-                                <th>Nombre</th>
                                 <th>Razón social</th>
                                 <th>RFC</th>
                                 <th>Estatus</th>
@@ -39,13 +38,15 @@
                             <tbody>
                                 @foreach ($empresas as $empresa)
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{ $empresa->nombre }}</td>
+                                        <td>{{ $empresa->clave }}</td>
+                                        <td>{{ $empresa->razon_social }}</td>
+                                        <td>{{ $empresa->rfc }}</td>
+                                        <td>{{ $empresa->estatus }}</td>
+                                        <td>
+                                            <a name="" id="" class="btn btn-success" href="#" role="button"><i class="fas fa-pencil-alt"></i></a>
+                                            <a name="" id="" class="btn btn-danger" href="#" role="button"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>

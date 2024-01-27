@@ -27,7 +27,6 @@ class Empresa extends Model
         'pais',
         'cp',
         'telefono',
-        'estatus',
-        'deleted_at'
+        'estatus'
     ];
 }
