@@ -9,6 +9,7 @@ use App\Http\Controllers\RolController;
 use App\Http\Controllers\AutobusesController;
 use App\Http\Controllers\OperadoresController;
 use App\Models\Operadores;
+use App\Http\Controllers\EmpleadoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,7 +51,7 @@ Route::middleware('auth')->group(function () {
         Route::resource('empresas',EmpresaController::class);
         Route::post('empresas/store', [EmpresaController::class,'store'])->name('empresas.store');
         Route::get('/empresas',[EmpresaController::class,'index'])->name('empresas.index');
-        Route::get('/empleados', fn() => view('web.catalogos.cat_empleados'))->name('cat_empleados');
+        Route::get('/empleados', [EmpleadoController::class,'index'])->name('cat_empleados');
         Route::get('/terminales', [TerminalController::class, 'index'])->name('cat_terminales');
         Route::get('/taquillas', [TaquillaController::class, 'index'])->name('cat_taquillas');
         Route::get('/precios', fn() => view('web.catalogos.cat_precios'))->name('cat_precios');
