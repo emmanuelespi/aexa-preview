@@ -33,4 +33,9 @@ class Empleado extends Model
         'id_empresa',
         'deleted_at'
     ];
+
+    public function empresa()
+    {
+        return $this->belongsTo(Empresa::class,'id');
+    }
 }
