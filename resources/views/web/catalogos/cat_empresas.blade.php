@@ -16,7 +16,7 @@
             <div class="col-6"></div>
             <div class="col-4"></div>
             <div class="col-2">
-                <a class="btn btn-primary btn-sm btn-block rounded-3" role="button" data-toggle="modal" data-target="#modalNuevaEmpresa">Nueva empresa<i class="fa fa-plus"></i></a>
+                <a class="btn btn-primary btn-sm btn-block rounded-3" role="button" data-toggle="modal" data-target="#modalNuevaEmpresa">Nueva empresa <i class="fa fa-plus"></i></a>
             </div>
         </div>
     </div>
@@ -44,8 +44,9 @@
                                         <td>{{ $empresa->rfc }}</td>
                                         <td>{{ $empresa->estatus }}</td>
                                         <td>
+                                            <a name="" id="" class="btn btn-primary" href="#" role="button"><i class="fa fa-eye"></i></a>
                                             <a name="" id="" class="btn btn-success" href="#" role="button"><i class="fas fa-pencil-alt"></i></a>
-                                            <a name="" id="" class="btn btn-danger" href="#" role="button"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                            <a name="" id="" class="btn btn-danger" href="#" role="button"><i class="fa fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 @endforeach
