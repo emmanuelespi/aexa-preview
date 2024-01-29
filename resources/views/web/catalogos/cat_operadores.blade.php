@@ -24,16 +24,14 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <table id="empresas" class="table table-responsive-sm table-striped table-bordered mt-2">
+                            <table id="operadores" class="table table-responsive-sm table-striped table-bordered mt-2">
                                 <thead>
-                                    <th>Tipo</th>
-                                    <th>Modelo</th>
-                                    <th>Catálogo</th>
-                                    <th>Número de serie:</th>
-                                    <th>Placa</th>
-                                    <th>Modelo</th>
-                                    <th>Estatus</th>
-                                    <th>Acciones</th>
+                                    <th>Nombre completo</th>
+                                    <th>Fecha nacimiento</th>
+                                    <th>Dirección</th>
+                                    <th>Telefono celular</th>
+                                    <th>Número de licencia</th>
+                                    <th>Fecha ingreso</th>
                                 </thead>
                                 <tbody>
                                     
@@ -45,4 +43,38 @@
             </div>
         </div>
     </section>
+@endsection
+
+@section('js')
+<script>
+    $(function() {
+        $("#operadores").DataTable({
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "lengthMenu": [5, 10, 25, 50],
+            language: {
+                "processing": "Procesando...",
+                "lengthMenu": "Mostrar _MENU_ registros",
+                "zeroRecords": "No se encontraron resultados",
+                "emptyTable": "Ningún dato disponible en esta tabla",
+                "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                "search": "Buscar:",
+                "infoThousands": ",",
+                "loadingRecords": "Cargando...",
+                "paginate": {
+                "first": "Primero",
+                "last": "Último",
+                "next": "Siguiente",
+                "previous": "Anterior"
+                },
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
+            }
+        });
+    });
+</script>
 @endsection
