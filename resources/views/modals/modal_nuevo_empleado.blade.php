@@ -35,14 +35,14 @@
                             <div class="row">
                                 <div class="form-group col-8">
                                     <label>Nombre completo:</label>
-                                    <input type="text" class="form-control form-control-sm"
-                                        placeholder="Nombre completo">
+                                    <input id="" name="" type="text" class="form-control form-control-sm" placeholder="Nombre completo">
                                 </div>
                                 <div class="form-group col-4">
                                     <label for="">Sexo:</label>
                                     <select class="form-control form-control-sm" name="" id="">
-                                        <option>Masculino</option>
-                                        <option>Femenino</option>
+                                        <option value="-">Elija una opción...</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Femenino">Femenino</option>
                                     </select>
                                 </div>
                             </div>
@@ -50,6 +50,7 @@
                                 <div class="form-group col-4">
                                     <label for="">Empresa:</label>
                                     <select class="form-control form-control-sm" name="" id="">
+                                        <option value="-">Elija una opción...</option>
                                         <option></option>
                                         <option></option>
                                     </select>
@@ -57,6 +58,7 @@
                                 <div class="form-group col-4">
                                     <label for="">Religión:</label>
                                     <select class="form-control form-control-sm" name="" id="">
+                                        <option value="-">Elija una opción...</option>
                                         <option></option>
                                         <option></option>
                                     </select>
@@ -64,34 +66,40 @@
                                 <div class="form-group col-4">
                                     <label for="">Estado civil:</label>
                                     <select class="form-control form-control-sm" name="" id="">
-                                        <option></option>
-                                        <option></option>
-                                        <option></option>
+                                        <option value="-">Elija una opción...</option>
+                                        <option value="1">Soltero(a)</option>
+                                        <option value="2">Casado(a)</option>
+                                        <option value="3">Divorciado(a)</option>
+                                        <option value="4">Viudo(a)</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-4">
                                     <label for="">Puesto:</label>
-                                    <input type="text" class="form-control form-control-sm" name="" id="" placeholder="Puesto">
+                                    <select class="form-control form-control-sm" name="" id="">
+                                        <option value="-">Elija una opción...</option>
+                                        <option value="1">Operador de planta.</option>
+                                        <option value="2">Segundo operador.</option>
+                                    </select>
                                 </div>
                                 <div class="form-group col-4">
                                     <label for="">Experiencia laboral:</label>
-                                    <input type="text" class="form-control form-control-sm" name="" id="" placeholder="Experiencia">
+                                    <input type="text" class="form-control form-control-sm" name="" id="" placeholder="Años de experiencia">
                                 </div>
                                 <div class="form-group col-4">
                                     <label for="">Ocupación:</label>
-                                    <input type="text" class="form-control form-control-sm" name="" id="" placeholder="">
+                                    <input type="text" class="form-control form-control-sm" name="" id="" placeholder="Escriba la ocupación del operador">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-6">
                                     <label for="">Referencia 1:</label>
-                                    <input type="text" class="form-control form-control-sm" name="" id=""  placeholder="Referencia 1">
+                                    <input type="text" class="form-control form-control-sm" name="" id=""  placeholder="Referencia personal 1">
                                 </div>
                                 <div class="form-group col-6">
                                     <label for="">Referencia 2:</label>
-                                    <input type="text" class="form-control form-control-sm" name="" id=""  placeholder="Referencia 2">
+                                    <input type="text" class="form-control form-control-sm" name="" id=""  placeholder="Referencia personal 2">
                                 </div>
                             </div>
                             <div class="row">
@@ -112,11 +120,9 @@
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                             <div class="row">
                                 <div class="form-group col-4">
-                                    <label for="">Tipo de empleado:</label>
+                                    <label for="">Perfil:</label>
                                     <select class="form-control form-control-sm" name="" id="">
-                                        <option></option>
-                                        <option></option>
-                                        <option></option>
+                                        <option>Elija el perfil del empleado</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-8">
@@ -138,42 +144,38 @@
                         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                             <div class="row">
                                 <div class="form-group col-3">
-                                    <label for="">Nacionalidad</label>
-                                    <input type="text" class="form-control" name="" id="" placeholder="Ingrese nacionalidad">
-                                </div>
-                                <div class="form-group col-3">
                                     <label for="">Estado:</label>
-                                    <select class="form-control" name="" id="">
-                                        <option></option>
-                                        <option></option>
-                                        <option></option>
+                                    <select class="form-control form-control-sm" name="" id="">
+                                        <option>Elija el estado de origen</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-3">
                                     <label for="">Municipio:</label>
-                                    <select class="form-control" name="" id="">
-                                        <option></option>
-                                        <option></option>
-                                        <option></option>
+                                    <select class="form-control form-control-sm" name="" id="">
+                                        <option>Elija el municipio</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-3">
+                                    <label for="">Nacionalidad</label>
+                                    <input type="text" class="form-control form-control-sm" name="" id="" placeholder="Ingrese nacionalidad">
+                                </div>
+                                <div class="form-group col-3">
                                     <label for="">Colonia:</label>
-                                    <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingrese colonia">
+                                    <input type="text" class="form-control form-control-sm" name="" id="" aria-describedby="helpId" placeholder="Ingrese colonia">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-4">
                                     <label for="">Num. exterior</label>
-                                    <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                                    <input type="text" class="form-control form-control-sm" name="" id="" aria-describedby="helpId" placeholder="">
                                 </div>
                                 <div class="form-group col-4">
                                     <label for="">Num. interior</label>
-                                    <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                                    <input type="text" class="form-control form-control-sm" name="" id="" aria-describedby="helpId" placeholder="">
                                 </div>
                                 <div class="form-group col-4">
                                     <label for="">Código postal</label>
-                                    <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                                    <input type="text" class="form-control form-control-sm" name="" id="" aria-describedby="helpId" placeholder="">
                                 </div>
                             </div>
                         </div>
