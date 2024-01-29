@@ -47,8 +47,10 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::prefix('/catalogos')->group(function(){
+        Route::resource('empresas',EmpresaController::class);
+        Route::post('empresas/store', [EmpresaController::class,'store'])->name('empresas.store');
+        Route::get('/empresas',[EmpresaController::class,'index'])->name('empresas.index');
         Route::get('/empleados', fn() => view('web.catalogos.cat_empleados'))->name('cat_empleados');
-        Route::get('/empresas', [EmpresaController::class, 'index'])->name('cat_empresas');
         Route::get('/terminales', [TerminalController::class, 'index'])->name('cat_terminales');
         Route::get('/taquillas', [TaquillaController::class, 'index'])->name('cat_taquillas');
         Route::get('/precios', fn() => view('web.catalogos.cat_precios'))->name('cat_precios');

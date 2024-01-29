@@ -16,7 +16,7 @@
             <div class="col-6"></div>
             <div class="col-4"></div>
             <div class="col-2">
-                <a class="btn btn-primary btn-sm btn-block rounded-3" role="button" data-toggle="modal" data-target="#modalNuevaEmpresa">Nueva empresa<i class="fa fa-plus"></i></a>
+                <a class="btn btn-primary btn-sm btn-block rounded-3" role="button" data-toggle="modal" data-target="#modalNuevaEmpresa">Nueva empresa <i class="fa fa-plus"></i></a>
             </div>
         </div>
     </div>
@@ -30,7 +30,6 @@
                             <thead>
                                 <th>Nombre</th>
                                 <th>Clave</th>
-                                <th>Nombre</th>
                                 <th>Razón social</th>
                                 <th>RFC</th>
                                 <th>Estatus</th>
@@ -39,13 +38,16 @@
                             <tbody>
                                 @foreach ($empresas as $empresa)
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{ $empresa->nombre }}</td>
+                                        <td>{{ $empresa->clave }}</td>
+                                        <td>{{ $empresa->razon_social }}</td>
+                                        <td>{{ $empresa->rfc }}</td>
+                                        <td>{{ $empresa->estatus }}</td>
+                                        <td>
+                                            <a name="" id="" class="btn btn-primary" href="#" role="button"><i class="fa fa-eye"></i></a>
+                                            <a name="" id="" class="btn btn-success" href="#" role="button"><i class="fas fa-pencil-alt"></i></a>
+                                            <a name="" id="" class="btn btn-danger" href="#" role="button"><i class="fa fa-trash"></i></a>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
