@@ -51,8 +51,9 @@
                                     <label for="">Empresa:</label>
                                     <select class="form-control form-control-sm" name="" id="">
                                         <option value="-">Elija una opción...</option>
-                                        <option></option>
-                                        <option></option>
+                                        @foreach ($empresa as $item)
+                                            <option value="{{ $item->id }}">{{ $item->nombre }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group col-4">
@@ -122,7 +123,10 @@
                                 <div class="form-group col-4">
                                     <label for="">Perfil:</label>
                                     <select class="form-control form-control-sm" name="" id="">
-                                        <option>Elija el perfil del empleado</option>
+                                        <option>Elija el perfil del empleado...</option>
+                                        @foreach ($perfil as $item)
+                                            <option value="{{ $item->id }}">{{ $item->nombre_perfil }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group col-8">

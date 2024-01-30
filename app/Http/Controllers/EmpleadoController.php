@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Empleado;
+use App\Models\Perfil;
+use App\Models\Empresa;
 
 class EmpleadoController extends Controller
 {
@@ -12,8 +14,10 @@ class EmpleadoController extends Controller
      */
     public function index()
     {
-        $empleado = empleado::all();
-        return view('web.catalogos.cat_empleados', compact('empleado'));
+        $empleado = Empleado::all();
+        $perfil = Perfil::select(['id','nombre_perfil'])->get();
+        $empresa = Empresa::select(['id','nombre'])->get();
+        return view('web.catalogos.cat_empleados', compact('empleado','perfil', 'empresa'));
     }
 
     /**
