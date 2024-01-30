@@ -30,7 +30,15 @@ class PerfilController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nombre_perfil' => 'required'
+        ]);
+
+        Perfil::create([
+            'nombre_perfil' => $request->input('nombre_perfil')
+        ]);
+
+        return redirect()->route('perfil.index');
     }
 
     /**

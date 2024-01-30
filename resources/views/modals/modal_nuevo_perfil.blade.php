@@ -8,13 +8,13 @@
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Formulario para agregar un perfil -->
-                <form method="POST" action="#">
+                <form method="POST" action="{{ route('perfil.store') }}">
                     @csrf
-                    <div class="form-group">
+                    <div class="form-group col-12">
                         <label for="nombre_perfil">Nombre del Perfil</label>
-                        <input type="text" class="form-control" id="nombre_perfil" name="nombre_perfil" required>
+                        <input type="text" class="form-control form-control-sm" id="nombre_perfil" name="nombre_perfil" required>
                     </div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </form>
             </div>

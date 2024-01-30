@@ -35,8 +35,20 @@
                                 @forelse ($perfiles as $perfil)
                                     <tr>
                                         <td>{{ $perfil->nombre_perfil }}</td>
-                                        <td>{{ $perfil->estatus }}</td>
-                                        <td></td>
+                                        <td>
+                                            @if ($perfil->estatus = 1)
+                                                <span class="badge badge-success">Activo</span>
+                                            @elseif ($perfil->estatus = 0)
+                                                <span class="badge badge-danger">Elimando</span>
+                                            @elseif ($perfil->estatus = 2)
+                                                <span class="badge badge-secondary">Desactivado</span>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <a name="" id="" class="btn btn-primary" href="#" role="button"><i class="fa fa-eye"></i></a>
+                                            <a name="" id="" class="btn btn-success" href="#" role="button"><i class="fas fa-pencil-alt"></i></a>
+                                            <a name="" id="" class="btn btn-danger" href="#" role="button"><i class="fa fa-trash"></i></a>
+                                        </td>
                                     </tr>
                                 @empty
                                     <tr>
