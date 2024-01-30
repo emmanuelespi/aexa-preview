@@ -18,9 +18,13 @@ return new class extends Migration
             $table->string('destino');
             $table->string('tipo');
             $table->string('capacidad');
-            
-            $table->unsignedBigInteger('id_empresa');
-            $table->foreign('id_empresa')->references('id')->on('empresa');
+            $table->tinyInteger('estatus')->default(1);
+            $table->string('clase');
+            $table->integer('hora');
+            $table->integer('minutos');
+
+            $table->unsignedBigInteger('id_autobus');
+            $table->foreign('id_autobus')->references('id')->on('autobuses');
 
             $table->timestamps();
             $table->softDeletes();
