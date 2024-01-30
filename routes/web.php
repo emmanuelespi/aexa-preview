@@ -10,6 +10,7 @@ use App\Http\Controllers\AutobusesController;
 use App\Http\Controllers\OperadoresController;
 use App\Models\Operadores;
 use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\PlantillaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,7 +55,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/empleados', [EmpleadoController::class,'index'])->name('cat_empleados');
         Route::get('/terminales', [TerminalController::class, 'index'])->name('cat_terminales');
         Route::get('/taquillas', [TaquillaController::class, 'index'])->name('cat_taquillas');
-        Route::get('/precios', fn() => view('web.catalogos.cat_precios'))->name('cat_precios');
+        Route::get('/plantilla', [PlantillaController::class,'index'])->name('cat_plantilla');
         Route::get('/perfiles', [PerfilController::class,'index'])->name('cat_perfiles');
         Route::get('/autobuses',[AutobusesController::class,'index'])->name('cat_autobuses');
         Route::get('/operadores', [OperadoresController::class,'index'])->name('cat_operadores');
