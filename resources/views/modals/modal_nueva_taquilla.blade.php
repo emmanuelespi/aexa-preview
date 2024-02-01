@@ -10,26 +10,7 @@
             <div class="modal-body">
                 <form method="POST" action="#">
                     @csrf
-                    <div class="row">
-                        <div class="form-group col-4">
-                            <label for="">Nombre de taquilla: </label>
-                            <input type="text" class="form-control form-control-sm" name="" id="" aria-describedby="helpId" placeholder="">
-                        </div>
-                        <div class="form-group col-8">
-                            <label for="">Número de taquilla: </label>
-                            <input type="text" class="form-control form-control-sm" name="" id="" aria-describedby="helpId" placeholder="">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-6">
-                            <label for="">Abreviación</label>
-                            <input type="text" class="form-control form-control-sm" name="" id="" aria-describedby="helpId" placeholder="">
-                        </div>
-                        <div class="form-group col-6">
-                            <label for="">Terminal:</label>
-                            <input type="text" class="form-control form-control-sm" name="" id="" aria-describedby="helpId" placeholder="">
-                        </div>
-                    </div>
+                    
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

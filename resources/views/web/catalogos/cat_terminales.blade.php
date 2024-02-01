@@ -16,7 +16,7 @@
             <div class="col-6"></div>
             <div class="col-4"></div>
             <div class="col-2">
-                <a class="btn btn-primary btn-sm btn-block rounded-3" role="button" data-toggle="modal" data-target="#modalAgregarTerminal">Nueva terminal<i class="fa fa-plus"></i></a>
+                <a class="btn btn-primary btn-sm btn-block rounded-3" role="button" data-toggle="modal" data-target="#modalAgregarTerminal">Nueva terminal <i class="fa fa-plus"></i></a>
             </div>
         </div>
     </div>
