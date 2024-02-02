@@ -53,7 +53,8 @@ Route::middleware('auth')->group(function () {
         Route::post('empresas/store', [EmpresaController::class,'store'])->name('empresas.store');
         Route::get('/empresas',[EmpresaController::class,'index'])->name('empresas.index');
         Route::get('/empleados', [EmpleadoController::class,'index'])->name('cat_empleados');
-        Route::get('/terminales', [TerminalController::class, 'index'])->name('cat_terminales');
+        Route::get('/terminales', [TerminalController::class,'index'])->name('terminales.index');
+        Route::post('/terminales/store', [TerminalController::class,'store'])->name('terminales.store');
         Route::get('/taquillas', [TaquillaController::class, 'index'])->name('cat_taquillas');
         Route::get('/plantilla', [PlantillaController::class,'index'])->name('cat_plantilla');
         Route::get('/perfiles', [PerfilController::class,'index'])->name('perfil.index');

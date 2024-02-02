@@ -28,15 +28,36 @@
                     <div class="card-body">
                         <table id="terminales" class="table table-responsive-sm table-striped table-bordered mt-2">
                             <thead>
-                                <th>Clave</th>
-                                <th>Numero</th>
+                                <th>Nombre de terminal</th>
                                 <th>Abreviación</th>
+                                <th>Latitud</th>
+                                <th>Longitud</th>
                                 <th>Origen</th>
                                 <th>Estatus</th>
                                 <th>Acciones</th>
                             </thead>
                             <tbody>
-
+                                @foreach ($terminales as $item)                               
+                                    <tr>
+                                        <td>{{ $item->nombre_terminal }}</td>
+                                        <td>{{ $item->abreviacion }}</td>
+                                        <td>{{ $item->latitud }}</td>
+                                        <td>{{ $item->longitud }}</td>
+                                        <td>{{ $item->origen }}</td>
+                                        <td>
+                                            @if ($item->estatus == 1)
+                                                <span class="badge badge-success">Activo</span>
+                                            @elseif ($item->estatus == 2)
+                                                <span class="badge badge-danger">Desactivado</span>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <a name="" id="" class="btn btn-primary" href="#" role="button"><i class="fa fa-eye"></i></a>
+                                            <a name="" id="" class="btn btn-success" href="#" role="button"><i class="fas fa-pencil-alt"></i></a>
+                                            <a name="" id="" class="btn btn-danger" href="#" role="button"><i class="fa fa-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

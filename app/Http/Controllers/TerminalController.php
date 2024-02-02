@@ -29,7 +29,28 @@ class TerminalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'clave_terminal' => 'required',
+            'num_terminal' => 'required',
+            'abreviacion' => 'required',
+            'latitud' => 'required',
+            'longitud' => 'required',
+            'mun_origen' => 'required',
+            'nombre_terminal' => 'required',
+            'pref_factura' => 'required'
+        ]);
+        Terminal::create([
+            'clave' => $request->input('clave_terminal'),
+            'numero' => $request->input('num_terminal'),
+            'abreviacion' => $request->input('abreviacion'),
+            'latitud' => $request->input('latitud'),
+            'longitud' => $request->input('longitud'),
+            'origen' => $request->input('mun_origen'),
+            'nombre_terminal' => $request->input('nombre_terminal'),
+            'prefijo_factura' => $request->input('pref_factura'),
+            'estatus' => 1
+        ]);
+        return redirect()->route('terminales.index');
     }
 
     /**

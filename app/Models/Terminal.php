@@ -19,6 +19,9 @@ class Terminal extends Model
         'abreviacion',
         'origen',
         'nombre_terminal',
+        'longitud',
+        'latitud',
+        'prefijo_factura',
         'estatus',
         'deleted_at'
     ];

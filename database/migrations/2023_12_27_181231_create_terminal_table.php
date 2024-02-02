@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('abreviacion', 5);
             $table->string('origen', 20);
             $table->string('nombre_terminal', 25);
+            $table->string('latitud',50);
+            $table->string('longitud',50);
+            $table->string('prefijo_factura',10);
             $table->tinyInteger('estatus')->default(1);
             $table->timestamps();
             $table->softDeletes();
