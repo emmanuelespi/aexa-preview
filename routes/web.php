@@ -8,7 +8,6 @@ use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\AutobusesController;
 use App\Http\Controllers\OperadoresController;
-use App\Models\Operadores;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\PlantillaController;
 use Illuminate\Support\Facades\Route;

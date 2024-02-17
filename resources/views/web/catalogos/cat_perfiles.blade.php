@@ -32,7 +32,7 @@
                                 <th>Acciones</th>
                             </thead>
                             <tbody>
-                                @forelse ($perfiles as $perfil)
+                                @if ($perfiles as $perfil)
                                     <tr>
                                         <td>{{ $perfil->nombre_perfil }}</td>
                                         <td>
@@ -50,11 +50,7 @@
                                             <a name="" id="" class="btn btn-danger" href="#" role="button"><i class="fa fa-trash"></i></a>
                                         </td>
                                     </tr>
-                                @empty
-                                    <tr>
-                                        <td colspan="3">No hay perfiles disponibles.</td>
-                                    </tr>
-                                @endforelse
+                                @endif
                             </tbody>
                         </table>
                     </div>
@@ -96,5 +92,6 @@
                 }
             });
         });
-    </script>    
+    </script>
+    <script src="{{ asset('js/form-nuevo-perfil.js') }}"></script>    
 @endsection
