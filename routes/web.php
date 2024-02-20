@@ -49,7 +49,7 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('/catalogos')->group(function(){
         Route::resource('empresas',EmpresaController::class);
-        Route::post('empresas/store', [EmpresaController::class,'store'])->name('empresas.store');
+        Route::post('/empresas/store', [EmpresaController::class,'store'])->name('empresas.store');
         Route::get('/empresas',[EmpresaController::class,'index'])->name('empresas.index');
         Route::get('/empleados', [EmpleadoController::class,'index'])->name('cat_empleados');
         Route::get('/terminales', [TerminalController::class, 'index'])->name('cat_terminales');

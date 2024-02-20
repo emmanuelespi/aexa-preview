@@ -14,6 +14,23 @@ class PerfilController extends Controller
     public function index()
     {
         $perfiles = Perfil::all();
+        foreach ($perfiles as $perfil) {
+            switch ($perfil->estatus) {
+                case 1:
+                    $perfil->badgeClass = 'badge badge-success';
+                    $perfil->text = "Activo";
+                    break;
+                case 2:
+                    $perfil->badgeClass = 'badge badge-secondary';
+                    $perfil->text = "Inactivo";
+                    break;
+                case 0:
+                    $perfil->badgeClass = 'badge badge-danger';
+                    $perfil->text = "Eliminado";
+                default:
+                    break;
+            }
+        }
         return view('web.catalogos.cat_perfiles', compact('perfiles'));
     }
 
@@ -30,15 +47,14 @@ class PerfilController extends Controller
      */
     public function store(Request $request)
     {
-        /*$request->validate([
+        $request->validate([
             'nombre_perfil' => 'required|max:20'
         ]);
 
-        Perfil::create([
+        /*$perfil = Perfil::create([
             'nombre_perfil' => $request->input('nombre_perfil')
-        ]);
+        ]); */
 
-        return redirect()->route('perfil.index'); */
         return $request;
     }
 
