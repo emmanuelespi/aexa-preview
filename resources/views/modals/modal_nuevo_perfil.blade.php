@@ -16,8 +16,9 @@
                         @error('nombre_perfil')
                             <p class="text-danger">{{ $message }}</p>
                         @enderror
+                        <p id="error_nombre_perfil" class="text-danger"></p>
                     </div>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-secondary" id="delInputPerfil" data-dismiss="modal" onclick="limpiarFormulario()">Cerrar</button>
                     <button type="submit" class="btn btn-primary" id="addPerfil">Guardar</button>
                 </form>
             </div>

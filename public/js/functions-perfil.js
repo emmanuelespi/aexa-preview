@@ -1,6 +1,6 @@
 const formPerfil = document.querySelector('#formAgregarPerfil');
 
-formPerfil.addEventListener('submit', (e) => {
+formPerfil.addEventListener('submit', async (e) => {
     e.preventDefault();
     const nombre_perfil = document.querySelector('#nombre_perfil');
     let url = '/catalogos/perfiles/store'
@@ -9,26 +9,31 @@ formPerfil.addEventListener('submit', (e) => {
 
     fetch(url,{
         method: 'POST',
-        body: formData
-    })
-
-    .then(response => {
-        if(!response.ok)
-        {
-            throw new Error('No responde la red');
+        body: formData,
+        headers: {
+            'Accept' : 'Application/json'
         }
-        return response.json();
     })
 
+    .then(response => response.json())
     .then(data => {
-        console.log(data);
-        //window.location.href = '/catalogos/perfiles';
+        if(data.errors && data.errors.nombre_perfil){
+            const errorElement = document.getElementById('error_nombre_perfil');
+            errorElement.innerHTML = data.errors.nombre_perfil[0];
+        } else {
+            console.log(data);
+        }
     })
 
     .catch(error => {
         console.error('Error:', error)
-    })
+    });
 });
+
+function limpiarFormulario()
+{
+    document.getElementById('formAgregarPerfil').reset();
+}
 
 
 
