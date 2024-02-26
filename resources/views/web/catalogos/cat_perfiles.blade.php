@@ -33,13 +33,15 @@
                             </thead>
                             <tbody>
                                 @foreach ($perfiles as $perfil)
-                                    <td>{{ $perfil->nombre_perfil }}</td>
-                                    <td><span class="{{ $perfil->badgeClass }}">{{ $perfil->text }}</span></td>
-                                    <td>
-                                        <a name="" id="" class="btn btn-primary" href="#" role="button"><i class="fa fa-eye"></i></a>
-                                        <a name="" id="" class="btn btn-success" href="#" role="button"><i class="fas fa-pencil-alt"></i></a>
-                                        <a name="" id="" class="btn btn-danger" href="#" role="button"><i class="fa fa-trash"></i></a>
-                                    </td>
+                                    <tr>
+                                        <td>{{ $perfil->nombre_perfil }}</td>
+                                        <td><span class="{{ $perfil->badgeClass }}">{{ $perfil->text }}</span></td>
+                                        <td>
+                                            <a name="" id="" class="btn btn-primary" href="#" role="button"><i class="fa fa-eye"></i></a>
+                                            <a name="" id="" class="btn btn-success" href="#" role="button"><i class="fas fa-pencil-alt"></i></a>
+                                            <a name="" id="" class="btn btn-danger" href="#" role="button"><i class="fa fa-trash"></i></a>
+                                        </td>
+                                    </tr>
                                 @endforeach
                             </tbody>
                         </table>
