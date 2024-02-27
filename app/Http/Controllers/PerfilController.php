@@ -13,7 +13,7 @@ class PerfilController extends Controller
      */
     public function index()
     {
-        $perfiles = Perfil::all();
+        $perfiles = Perfil::orderBy('created_at','desc')->get();
         foreach ($perfiles as $perfil) {
             switch ($perfil->estatus) {
                 case 1:
@@ -52,10 +52,13 @@ class PerfilController extends Controller
         ]);
 
         $perfil = Perfil::create([
-            'nombre_perfil' => $validatedData['nombre_perfil']
+            'nombre_perfil' => $validatedData['nombre_perfil'],
+            'estatus' => true
         ]);
 
-        return redirect()->route('perfil.index');
+        return response()->json($perfil);
+
+        //return redirect()->route('perfil.index');
     }
 
     /**

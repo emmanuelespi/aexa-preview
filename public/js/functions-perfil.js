@@ -1,45 +1,10 @@
 const formPerfil = document.querySelector('#formAgregarPerfil');
-
-formPerfil.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const nombre_perfil = document.querySelector('#nombre_perfil');
-    let url = '/catalogos/perfiles/store'
-
-    const formData = new FormData(formPerfil);
-
-    fetch(url,{
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept' : 'Application/json'
-        }
-    })
-
-    .then(response => response.json())
-    .then(data => {
-        if(data.errors && data.errors.nombre_perfil){
-            const errorElement = document.getElementById('error_nombre_perfil');
-            errorElement.innerHTML = data.errors.nombre_perfil[0];
-        } else {
-            console.log(data);
-        }
-    })
-
-    .catch(error => {
-        console.error('Error:', error)
-    });
-});
-
-function limpiarFormulario()
-{
-    document.getElementById('formAgregarPerfil').reset();
-}
-
-
+let error_nombre_perfil = document.querySelector('#error_nombre_perfil');
+let tablePerfiles;
 
 document.addEventListener('DOMContentLoaded', function(){
     $(function() {
-        $("#perfiles").DataTable({
+        tablePerfiles = $("#perfiles").DataTable({
             "paging": true,
             "lengthChange": true,
             "searching": true,
@@ -69,3 +34,43 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     });
 });
+
+formPerfil.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    let url = '/catalogos/perfiles/store'
+
+    const formData = new FormData(formPerfil);
+
+    fetch(url,{
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept' : 'Application/json'
+        }
+    })
+
+    .then(response => response.json())
+    .then(data => {
+        if(data.estatus)
+        {
+            $('#delInputPerfil').click();
+            limpiarFormulario();
+            swal.fire('Perfil','Nuevo registro agregado','success');
+            window.location = "perfiles";
+        }
+        else
+        {
+            error_nombre_perfil.innerHTML = data.message;
+        }
+    })
+
+    .catch(error => {
+        console.error('Error:', error)
+    });
+});
+
+function limpiarFormulario()
+{
+    document.getElementById('formAgregarPerfil').reset();
+    error_nombre_perfil.innerHTML = "";
+}

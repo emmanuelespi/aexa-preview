@@ -54,5 +54,5 @@
 @endsection
 
 @section('js')
-    <script src="{{ asset('js/functions-perfil.js') }}"></script>    
+    <script src="{{ asset('js/functions-perfil.js') }}"></script>
 @endsection
