@@ -27,15 +27,19 @@
                     <div class="card-body">
                         <table id="perfiles" class="table table-responsive-sm table-striped table-bordered mt-2">
                             <thead>
-                                <th style="width: 20%">Nombre</th>
-                                <th style="width: 10%">Estatus</th>
-                                <th style="width: 10%">Acciones</th>
+                                <tr>
+                                    <th style="width: 5%">Id</th>
+                                    <th style="width: 10%">Nombre</th>
+                                    <th style="width: 5%">Estatus</th>
+                                    <th style="width: 10%">Acciones</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 @foreach ($perfiles as $perfil)
                                     <tr>
+                                        <td>{{ $perfil->id }}</td>
                                         <td>{{ $perfil->nombre_perfil }}</td>
-                                        <td><span class="{{ $perfil->badgeClass }}">{{ $perfil->text }}</span></td>
+                                        <td>{{ $perfil->estatus }}</span></td>
                                         <td>
                                             <a name="" id="" class="btn btn-primary" href="#" role="button"><i class="fa fa-eye"></i></a>
                                             <a name="" id="" class="btn btn-success" href="#" role="button"><i class="fas fa-pencil-alt"></i></a>

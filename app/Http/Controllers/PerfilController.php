@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Perfil;
 use Illuminate\Support\Facades\View;
+use JeroenNoten\LaravelAdminLte\View\Components\Tool\Datatable;
+
+use function Livewire\of;
+use function Pest\Laravel\json;
 
 class PerfilController extends Controller
 {
@@ -13,25 +17,44 @@ class PerfilController extends Controller
      */
     public function index()
     {
-        $perfiles = Perfil::orderBy('created_at','desc')->get();
+        $perfiles = Perfil::select('id','nombre_perfil','estatus')->get();
         foreach ($perfiles as $perfil) {
             switch ($perfil->estatus) {
                 case 1:
-                    $perfil->badgeClass = 'badge badge-success';
-                    $perfil->text = "Activo";
+                    $perfil->estatus = '<span class="badge badge-success">Activo</span>';
                     break;
                 case 2:
-                    $perfil->badgeClass = 'badge badge-secondary';
-                    $perfil->text = "Inactivo";
+                    $perfil->estatus = '<span class="badge badge-secondary">Inactivo</span>';
                     break;
                 case 0:
-                    $perfil->badgeClass = 'badge badge-danger';
-                    $perfil->text = "Eliminado";
+                    $perfil->badgeClass = '<span class="badge badge-secondary">Eliminado</span>';
+                    break;
                 default:
                     break;
             }
         }
         return view('web.catalogos.cat_perfiles', compact('perfiles'));
+    }
+
+    public function obtenerDatos()
+    {
+        $perfiles = Perfil::select('id','nombre_perfil','estatus')->get();
+        foreach($perfiles as $perfil){
+            switch ($perfil->estatus) {
+                case 1:
+                    $perfil->estatus = '<span class="badge badge-success">Activo</span>';
+                    break;
+                case 2:
+                    $perfil->estatus = '<span class="badge badge-secondary">Inactivo</span>';
+                    break;
+                case 0:
+                    $perfil->badgeClass = '<span class="badge badge-secondary">Eliminado</span>';
+                    break;
+                default:
+                    break;
+            }
+        }
+        return response()->json($perfiles);
     }
 
     /**
@@ -53,12 +76,12 @@ class PerfilController extends Controller
 
         $perfil = Perfil::create([
             'nombre_perfil' => $validatedData['nombre_perfil'],
-            'estatus' => true
         ]);
 
-        return response()->json($perfil);
-
-        //return redirect()->route('perfil.index');
+        return response()->json([
+            'estatus' => 'true',
+            'message' => 'Registro almacenado correctamente'
+        ], 200);
     }
 
     /**

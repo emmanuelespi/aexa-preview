@@ -56,6 +56,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/taquillas', [TaquillaController::class, 'index'])->name('cat_taquillas');
         Route::get('/plantilla', [PlantillaController::class,'index'])->name('cat_plantilla');
         Route::get('/perfiles', [PerfilController::class,'index'])->name('perfil.index');
+        Route::get('/perfiles/obtenerDatos', [PerfilController::class,'obtenerDatos'])->name('perfil.obtenerDatos');
         Route::post('/perfiles/store', [PerfilController::class,'store'])->name('perfil.store');
         Route::get('/autobuses',[AutobusesController::class,'index'])->name('cat_autobuses');
         Route::get('/operadores', [OperadoresController::class,'index'])->name('cat_operadores');
