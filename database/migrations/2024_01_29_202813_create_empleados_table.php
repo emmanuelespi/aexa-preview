@@ -13,29 +13,36 @@ return new class extends Migration
     {
         Schema::create('empleados', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre_completo');
-            $table->string('fecha_nacimiento');
-            $table->string('direccion');
-            $table->string('estado');
-            $table->string('municipio');
-            $table->string('colonia');
-            $table->string('codigo_postal');
-            $table->string('sexo');
-            $table->string('telefono_celular');
-            $table->string('email');
-            $table->string('tipo_licencia');
-            $table->string('numero_licencia');
-            $table->string('rfc');
-            $table->string('fecha_ingreso');
-            $table->string('fecha_baja');
-            $table->string('observaciones');
+            $table->string('nombre', 90);
+            $table->string('ap_paterno', 120);
+            $table->string('ap_materno', 120);
+            $table->string('fecha_nacimiento', 40);
+            $table->string('telefono_celular', 12)->nullable();
+            $table->string('curp', 25);
+            $table->string('rfc', 15)->nullable();
+            $table->string('fecha_alta_imss', 40)->nullable();
+            $table->string('nss', 15)->nullable();
+            $table->string('email', 150);
+            $table->string('direccion', 180);
+            $table->string('estado_civil', 20);
+            $table->string('estado', 40);
+            $table->string('municipio', 100);
+            $table->string('codigo_postal', 10)->nullable();
+            $table->string('sexo', 30);
+            $table->string('puesto', 30);
+            $table->string('codigo_empleado', 15)->nullable();
+            $table->string('fecha_ingreso', 40)->nullable();
+            $table->string('observaciones', 200);
             $table->tinyInteger('estatus')->default(1);
-            
-            $table->unsignedBigInteger('id_empresa');
-            $table->foreign('id_empresa')->references('id')->on('empresa');
-            
             $table->timestamps();
             $table->softDeletes();
+
+            $table->unsignedBigInteger('empresa_id');
+            $table->foreign('empresa_id')->references('id')->on('empresa');
+
+            $table->unsignedBigInteger('perfil_id');
+            $table->foreign('perfil_id')->references('id')->on('perfil');
+
             $table->engine = 'InnoDB';
         });
     }
