@@ -27,34 +27,26 @@
                     <div class="card-body">
                         <table id="perfiles" class="table table-responsive-sm table-striped table-bordered mt-2">
                             <thead>
-                                <th>Nombre</th>
-                                <th>Estatus</th>
-                                <th>Acciones</th>
+                                <tr>
+                                    <th style="width: 5%">Id</th>
+                                    <th style="width: 10%">Nombre</th>
+                                    <th style="width: 5%">Estatus</th>
+                                    <th style="width: 10%">Acciones</th>
+                                </tr>
                             </thead>
                             <tbody>
-                                @forelse ($perfiles as $perfil)
+                                @foreach ($perfiles as $perfil)
                                     <tr>
+                                        <td>{{ $perfil->id }}</td>
                                         <td>{{ $perfil->nombre_perfil }}</td>
-                                        <td>
-                                            @if ($perfil->estatus = 1)
-                                                <span class="badge badge-success">Activo</span>
-                                            @elseif ($perfil->estatus = 0)
-                                                <span class="badge badge-danger">Elimando</span>
-                                            @elseif ($perfil->estatus = 2)
-                                                <span class="badge badge-secondary">Desactivado</span>
-                                            @endif
-                                        </td>
+                                        <td>{{ $perfil->estatus }}</span></td>
                                         <td>
                                             <a name="" id="" class="btn btn-primary" href="#" role="button"><i class="fa fa-eye"></i></a>
                                             <a name="" id="" class="btn btn-success" href="#" role="button"><i class="fas fa-pencil-alt"></i></a>
                                             <a name="" id="" class="btn btn-danger" href="#" role="button"><i class="fa fa-trash"></i></a>
                                         </td>
                                     </tr>
-                                @empty
-                                    <tr>
-                                        <td colspan="3">No hay perfiles disponibles.</td>
-                                    </tr>
-                                @endforelse
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -66,35 +58,5 @@
 @endsection
 
 @section('js')
-    <script>
-        $(function() {
-            $("#perfiles").DataTable({
-                "paging": true,
-                "lengthChange": true,
-                "searching": true,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-                "lengthMenu": [5, 10, 25, 50],
-                language: {
-                    "processing": "Procesando...",
-                    "lengthMenu": "Mostrar _MENU_ registros",
-                    "zeroRecords": "No se encontraron resultados",
-                    "emptyTable": "Ningún dato disponible en esta tabla",
-                    "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
-                    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
-                    "search": "Buscar:",
-                    "infoThousands": ",",
-                    "loadingRecords": "Cargando...",
-                    "paginate": {
-                    "first": "Primero",
-                    "last": "Último",
-                    "next": "Siguiente",
-                    "previous": "Anterior"
-                    },
-                    "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
-                }
-            });
-        });
-    </script>    
+    <script src="{{ asset('js/functions-perfil.js') }}"></script>
 @endsection

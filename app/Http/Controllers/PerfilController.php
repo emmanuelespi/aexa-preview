@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Perfil;
 use Illuminate\Support\Facades\View;
+use JeroenNoten\LaravelAdminLte\View\Components\Tool\Datatable;
+
+use function Livewire\of;
+use function Pest\Laravel\json;
 
 class PerfilController extends Controller
 {
@@ -13,8 +17,44 @@ class PerfilController extends Controller
      */
     public function index()
     {
-        $perfiles = Perfil::all();
+        $perfiles = Perfil::select('id','nombre_perfil','estatus')->get();
+        foreach ($perfiles as $perfil) {
+            switch ($perfil->estatus) {
+                case 1:
+                    $perfil->estatus = '<span class="badge badge-success">Activo</span>';
+                    break;
+                case 2:
+                    $perfil->estatus = '<span class="badge badge-secondary">Inactivo</span>';
+                    break;
+                case 0:
+                    $perfil->badgeClass = '<span class="badge badge-secondary">Eliminado</span>';
+                    break;
+                default:
+                    break;
+            }
+        }
         return view('web.catalogos.cat_perfiles', compact('perfiles'));
+    }
+
+    public function obtenerDatos()
+    {
+        $perfiles = Perfil::select('id','nombre_perfil','estatus')->get();
+        foreach($perfiles as $perfil){
+            switch ($perfil->estatus) {
+                case 1:
+                    $perfil->estatus = '<span class="badge badge-success">Activo</span>';
+                    break;
+                case 2:
+                    $perfil->estatus = '<span class="badge badge-secondary">Inactivo</span>';
+                    break;
+                case 0:
+                    $perfil->badgeClass = '<span class="badge badge-secondary">Eliminado</span>';
+                    break;
+                default:
+                    break;
+            }
+        }
+        return response()->json($perfiles);
     }
 
     /**
@@ -30,15 +70,18 @@ class PerfilController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nombre_perfil' => 'required'
+        $validatedData = $request->validate([
+            'nombre_perfil' => 'required|max:20'
         ]);
 
-        Perfil::create([
-            'nombre_perfil' => $request->input('nombre_perfil')
+        $perfil = Perfil::create([
+            'nombre_perfil' => $validatedData['nombre_perfil'],
         ]);
 
-        return redirect()->route('perfil.index');
+        return response()->json([
+            'estatus' => 'true',
+            'message' => 'Registro almacenado correctamente'
+        ], 200);
     }
 
     /**

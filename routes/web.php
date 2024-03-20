@@ -8,7 +8,6 @@ use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\AutobusesController;
 use App\Http\Controllers\OperadoresController;
-use App\Models\Operadores;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\PlantillaController;
 use Illuminate\Support\Facades\Route;
@@ -50,7 +49,7 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('/catalogos')->group(function(){
         Route::resource('empresas',EmpresaController::class);
-        Route::post('empresas/store', [EmpresaController::class,'store'])->name('empresas.store');
+        Route::post('/empresas/store', [EmpresaController::class,'store'])->name('empresas.store');
         Route::get('/empresas',[EmpresaController::class,'index'])->name('empresas.index');
         Route::get('/empleados', [EmpleadoController::class,'index'])->name('cat_empleados');
         Route::get('/terminales', [TerminalController::class,'index'])->name('terminales.index');
@@ -58,6 +57,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/taquillas', [TaquillaController::class, 'index'])->name('cat_taquillas');
         Route::get('/plantilla', [PlantillaController::class,'index'])->name('cat_plantilla');
         Route::get('/perfiles', [PerfilController::class,'index'])->name('perfil.index');
+        Route::get('/perfiles/obtenerDatos', [PerfilController::class,'obtenerDatos'])->name('perfil.obtenerDatos');
         Route::post('/perfiles/store', [PerfilController::class,'store'])->name('perfil.store');
         Route::get('/autobuses',[AutobusesController::class,'index'])->name('cat_autobuses');
         Route::get('/operadores', [OperadoresController::class,'index'])->name('cat_operadores');
