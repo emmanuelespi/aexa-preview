@@ -13,20 +13,20 @@ return new class extends Migration
     {
         Schema::create('autobuses', function (Blueprint $table) {
             $table->id();
-            $table->string('tipo');
-            $table->string('numero_serie');
-            $table->string('marca');
-            $table->string('modelo');
-            $table->string('placa');
-            $table->string('anio_fabricacion');
-            $table->string('capacidad_pasajeros');
-            $table->string('num_economico');
-            $table->string('fecha_compra');
-            $table->string('fecha_verificacion');
-            $table->string('fecha_inicio_seguro');
-            $table->string('fecha_fin_seguro');
-            $table->string('estatus');
-            $table->string('observaciones');
+            $table->string('tipo', 25);
+            $table->string('numero_serie', 30);
+            $table->string('marca', 40);
+            $table->string('modelo', 35);
+            $table->string('placa', 10);
+            $table->string('anio_fabricacion', 15);
+            $table->integer('capacidad_pasajeros');
+            $table->integer('num_economico');
+            $table->string('fecha_compra'. 20);
+            $table->string('fecha_verificacion', 20);
+            $table->string('fecha_inicio_seguro', 20);
+            $table->string('fecha_fin_seguro', 20);
+            $table->tinyInteger('estatus')->default(1);
+            $table->string('observaciones', 200);
             $table->timestamps();
             $table->softDeletes();
             $table->engine = 'InnoDB';
