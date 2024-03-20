@@ -14,24 +14,21 @@ return new class extends Migration
         Schema::create('autobuses', function (Blueprint $table) {
             $table->id();
             $table->string('tipo');
-            $table->string('modelo');
-            $table->string('catalogo');
             $table->string('numero_serie');
-            $table->string('numero_motor');
             $table->string('marca');
+            $table->string('modelo');
             $table->string('placa');
-            $table->integer('capacidad');
-            $table->integer('numero_economico');
-            $table->integer('servicio');
-            $table->dateTime('fecha_compra');
-            $table->dateTime('fecha_verificacion');
-            $table->dateTime('fecha_inicio_seguro');
-            $table->dateTime('fecha_fin_seguro');
-            $table->tinyInteger('estatus')->default(1);
+            $table->string('anio_fabricacion');
+            $table->string('capacidad_pasajeros');
+            $table->string('num_economico');
+            $table->string('fecha_compra');
+            $table->string('fecha_verificacion');
+            $table->string('fecha_inicio_seguro');
+            $table->string('fecha_fin_seguro');
+            $table->string('estatus');
+            $table->string('observaciones');
             $table->timestamps();
             $table->softDeletes();
-            $table->unsignedBigInteger('id_empresa');
-            $table->foreign('id_empresa')->references('id')->on('empresa');
             $table->engine = 'InnoDB';
         });
     }
