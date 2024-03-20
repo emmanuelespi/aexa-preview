@@ -37,9 +37,6 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->unsignedBigInteger('empresa_id');
-            $table->foreign('empresa_id')->references('id')->on('empresa');
-
             $table->unsignedBigInteger('perfil_id');
             $table->foreign('perfil_id')->references('id')->on('perfil');
 
