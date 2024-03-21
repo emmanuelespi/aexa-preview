@@ -19,8 +19,6 @@ return new class extends Migration
             $table->integer('minutos_distancia');
             $table->timestamps();
             $table->softDeletes();
-            $table->unsignedBigInteger('plantilla_viaje_id');
-            $table->foreign('plantilla_viaje_id')->references('id')->on('plantilla_viaje');
             $table->engine = 'InnoDB';
         });
     }
