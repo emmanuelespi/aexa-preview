@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('autobuses', function (Blueprint $table) {
+        Schema::create('autobus', function (Blueprint $table) {
             $table->id();
             $table->string('tipo', 25);
             $table->string('numero_serie', 30);
@@ -29,7 +29,12 @@ return new class extends Migration
             $table->string('observaciones', 200);
             $table->timestamps();
             $table->softDeletes();
+            $table->unsignedBigInteger('marca_id');
+            $table->foreign('marca_id')->references('id')->on('marca');
+            $table->unsignedBigInteger('empresa_id');
+            $table->foreign('empresa_id')->references('id')->on('empresa');
             $table->engine = 'InnoDB';
+            $table->timestamps();
         });
     }
 
@@ -38,6 +43,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('autobuses');
+        Schema::dropIfExists('autobus');
     }
 };
