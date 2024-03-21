@@ -34,7 +34,6 @@ return new class extends Migration
             $table->unsignedBigInteger('empresa_id');
             $table->foreign('empresa_id')->references('id')->on('empresa');
             $table->engine = 'InnoDB';
-            $table->timestamps();
         });
     }
 
