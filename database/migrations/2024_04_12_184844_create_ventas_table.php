@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('ventas', function (Blueprint $table) {
             $table->id();
+            $table->integer('cantidad');
             $table->double('total');
             $table->double('descuento');
             $table->double('aexa_nip_puntos_generados');

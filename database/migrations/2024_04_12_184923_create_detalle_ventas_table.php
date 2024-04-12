@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('producto', 50);
             $table->string('tipo_producto', 80);
-            $table->integer('cantidad');
+            
             $table->double('subtotal');
             $table->double('total');
             $table->integer('aexa_nip_puntos_generados');
