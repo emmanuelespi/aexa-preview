@@ -11,15 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('empleado_empresa', function (Blueprint $table) {
+        Schema::create('operadores_autobus', function (Blueprint $table) {
             $table->id();
             $table->tinyInteger('estatus')->default(1);
             $table->timestamps();
-            
-            $table->unsignedBigInteger('empleados_id');
-            $table->foreign('empleados_id')->references('id')->on('empleados');
-            $table->unsignedBigInteger('empresa_id');
-            $table->foreign('empresa_id')->references('id')->on('empresa');
+            $table->softDeletes();
+            $table->unsignedBigInteger('operador_id');
+            $table->foreign('operador_id')->references('id')->on('operadores');
+            $table->unsignedBigInteger('autobus_id');
+            $table->foreign('autobus_id')->references('id')->on('autobus');
+            $table->engine = 'InnoDB';
         });
     }
 
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('empleado_empresa');
+        Schema::dropIfExists('operadores_autobus');
     }
 };

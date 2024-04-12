@@ -13,17 +13,7 @@ return new class extends Migration
     {
         Schema::create('detalle_ventas', function (Blueprint $table) {
             $table->id();
-            $table->string('producto', 50);
-            $table->string('tipo_producto', 80);
-            $table->integer('cantidad');
-            $table->double('subtotal');
-            $table->double('total');
-            $table->integer('aexa_nip_puntos_generados');
             $table->timestamps();
-            $table->softDeletes();
-            $table->unsignedBigInteger('ventas_id');
-            $table->foreign('ventas_id')->references('id')->on('ventas');
-            $table->engine = 'InnoDB';
         });
     }
 
