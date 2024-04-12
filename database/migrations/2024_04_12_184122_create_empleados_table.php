@@ -29,7 +29,6 @@ return new class extends Migration
             $table->string('municipio', 100);
             $table->string('codigo_postal', 10)->nullable();
             $table->string('sexo', 30);
-
             $table->string('puesto', 30);
             $table->string('codigo_empleado', 15)->nullable();
             $table->string('fecha_ingreso', 40)->nullable();
@@ -38,8 +37,8 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->unsignedBigInteger('perfil_id');
-            $table->foreign('perfil_id')->references('id')->on('perfil');
+            $table->unsignedBigInteger('plaza_id');
+            $table->foreign('plaza_id')->references('id')->on('plazas');
 
             $table->unsignedBigInteger('puesto_id');
             $table->foreign('puesto_id')->references('id')->on('puestos');
