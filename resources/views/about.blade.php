@@ -1,9 +1,9 @@
 <x-app-layout>
     <x-slot name="header">
-        {{ __('Dashboard') }}
+        {{ __('About us') }}
     </x-slot>
 
     <div class="p-4 bg-white rounded-lg shadow-xs">
-        {{ __('You are logged in!') }}
+        {{ __('Sample static text page') }}
     </div>
 </x-app-layout>
