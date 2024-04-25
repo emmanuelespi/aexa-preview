@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('estado', 50);
             $table->string('pais', 50);
             $table->string('cp', 10);
+            $table->string('logo',225);
             $table->string('telefono', 15);
             $table->tinyInteger('estatus')->default(1);
             $table->softDeletes();
