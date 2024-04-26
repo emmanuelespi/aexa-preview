@@ -1,7 +1,7 @@
 <aside class="z-20 flex-shrink-0 hidden w-64 overflow-y-auto bg-white md:block">
     <div class="py-4 text-gray-500">
         <a class="ml-6 text-lg font-bold text-gray-800" href="{{ route('dashboard') }}">
-            Windmill
+            <strong>AEXA</strong> <span class="text-light">ERP</span>
         </a>
 
         <ul class="mt-6">

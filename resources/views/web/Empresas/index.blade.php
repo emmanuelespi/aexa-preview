@@ -1,10 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex items-center justify-between">
-            <h2 class="text-lg font-semibold leading-tight text-gray-900">{{ __('Company') }}</h2>
-            <button class="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-green-500 border border-transparent rounded-md shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                Nuevo Registro
-            </button> 
+            <h2 class="text-lg font-semibold leading-tight text-gray-900">{{ __('Empresas') }}</h2>
+            <a href="{{ route('empresas.create') }}" class="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-green-500 border border-transparent rounded-md shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                Nueva empresa
+            </a>
         </div>
     </x-slot>
 
@@ -79,8 +79,6 @@
         </div>
     </div>
 </div>
-
-<livewire:modal-nueva-empresa />
 
 </x-app-layout>
 

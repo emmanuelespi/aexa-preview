@@ -21,7 +21,8 @@ class EmpresaController extends Controller
      */
     public function create()
     {
-        //
+        
+        return view('web.Empresas.create');
     }
 
     /**
@@ -29,7 +30,7 @@ class EmpresaController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        /* $request->validate([
             'clave' => 'required',
             'nombre_empresa' => 'required',
             'razon_social' => 'required',
@@ -61,7 +62,7 @@ class EmpresaController extends Controller
             'pais' => $request->input('pais'), 
             'telefono' => $request->input('telefono'), 
             'estatus' => '1']);
-        return redirect()->route('empresas.index');
+        return redirect()->route('empresas.index'); */
     }
 
     /**
