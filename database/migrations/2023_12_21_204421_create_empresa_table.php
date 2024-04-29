@@ -28,6 +28,8 @@ return new class extends Migration
             $table->string('cp', 10);
             $table->string('logo',225);
             $table->string('telefono', 15);
+            $table->string('regimen_fiscal', 55);
+            $table->string('uso_cfdi', 80);
             $table->tinyInteger('estatus')->default(1);
             $table->softDeletes();
             $table->timestamps();
