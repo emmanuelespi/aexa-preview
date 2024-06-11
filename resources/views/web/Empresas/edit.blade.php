@@ -151,9 +151,8 @@
                 <div class="flex items-center justify-end mt-6 gap-x-6">
                     <a href="{{ route('empresas.index') }}" type="button"
                         class="px-3 py-2 text-sm font-semibold text-white bg-gray-700 rounded-md shadow-sm hover:bg-gray-500 focus-visible:outline focus:visible:outline-2-gray-700">Cancelar</a>
-                    <button type="submit" class="px-3 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                        Guardar
-                    </button>
+                    <button type="submit"
+                        class="px-3 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Guardar</button>
                 </div>
             </form>
         </div>
